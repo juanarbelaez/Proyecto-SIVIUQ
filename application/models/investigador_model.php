@@ -1,6 +1,6 @@
 <?php 
 
-class Investigador{
+class investigador_model{
 
 /*
 Atributos de la clase Investigador.
@@ -33,4 +33,11 @@ Atributos de la clase Investigador.
 
 
 	}
+
+
+	 function consultar_investigadores(){
+      $ssql = "select * from Investigador";
+      return mysql_query($ssql);
+	
+   }
 }
