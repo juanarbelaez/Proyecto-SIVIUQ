@@ -7,7 +7,7 @@ class Investigador_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('Investigador_view');
+		$this->load->view('editarInvestigador_view');
 	}
 
 	/**
@@ -32,6 +32,30 @@ class Investigador_Controller extends CI_Controller{
 		if($this->Investigador_Model->insertar($investigador))
 			redirect('Investigador_Controller');
 
+	}
+	
+	/**
+	 * funcion para editar un investigador con los datos que llegan desde Investigador_View.
+	 */
+		function editar(){
+		$this->load->helper('url');
+
+		$id=$this->input->post('documento');
+		$investigador= array(
+				'PROGRAMA'=> $this->input->post('programa'),
+				'FACULTAD'=> $this->input->post('facultad'),
+				'GRUPO_INVESTIGACION'=> $this->input->post('grupo_investigacion'),
+				'TIPO_VINCULACION'=> $this->input->post('tipo_vinculacion'),
+				'NOMBRE'=> $this->input->post('nombre'),
+				'CELULAR'=> $this->input->post('celular'),
+				'CORREO'=> $this->input->post('correo')
+		);
+		
+		$this->load->model('Investigador_Model');
+		$this->Investigador_Model->editar($id,$investigador);
+			redirect('Investigador_Controller');
+		
+		
 	}
 	
 }

@@ -10,20 +10,26 @@ class EstudianteSemillero_Model extends CI_Model{
 	/**
 	 *  Metodo para insertar un Estudiante de Semillero a la base de datos.
 	 * @param unknown estudiante, el estudiante a insertar.
-	 * @return boolean, true si inserto y false si no.
 	 * @author, Juan Sebastian Florez Saavedra
 	 * @author, Jeison Julian Barbosa
 	 * @author, Fabian David Osorio Sarmiento
 	 */
 	function insertar($estudiante){
-		if($this->db->insert('ESTUDIANTE_SEMILLERO', $estudiante)){
-				
-			return true;
-				
-		}
-		else{
-			return false;
-		
-			}
+		$this->db->insert('ESTUDIANTE_SEMILLERO', $estudiante);
+	}
+	
+	/**
+	 *  Metodo para editar un Estudiante de semillero en la base de datos.
+	 * @param unknown $estudiante, el estudiante a editar.
+	 * @author, Juan Sebastian Florez Saavedra
+	 * @author, Jeison Julian Barbosa
+	 * @author, Fabian David Osorio Sarmiento
+	 */
+	function editar($id,$estudiante){
+	
+		$this->db->where('identificacion', $id);
+		$this->db->update('ESTUDIANTE_SEMILLERO', $estudiante);
+			
+	
 	}
 }

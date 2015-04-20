@@ -8,21 +8,29 @@ class Investigador_Model extends CI_Model{
 
 	/**
 	 *  Metodo para insertar un investigador a la base de datos.
-	 * @param unknown $investigador, el investigador a insertar.
-	 * @return boolean, true si inserto y false si no.
+	 * @param unknown $investigador, el investigador a editar
 	 * @author, Juan Sebastian Florez Saavedra
 	 * @author, Jeison Julian Barbosa
 	 * @author, Fabian David Osorio Sarmiento
 	 */
 	function insertar($investigador){
-		if($this->db->insert('INVESTIGADOR', $investigador)){
-
-			return true;
-
-		}
-		else{
-			return false;
-
-		}
+		
+		$this->db->insert('INVESTIGADOR', $investigador);
+	
+	}
+	
+	/**
+	 *  Metodo para editar un investigador a la base de datos.
+	 * @param unknown $investigador, el investigador a editar.
+	 * @author, Juan Sebastian Florez Saavedra
+	 * @author, Jeison Julian Barbosa
+	 * @author, Fabian David Osorio Sarmiento
+	 */
+		function editar($id,$investigador){
+						
+			$this->db->where('documento', $id);
+			$this->db->update('INVESTIGADOR', $investigador);
+			
+						
 	}
 }
