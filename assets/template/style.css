@@ -1,0 +1,80 @@
+/*Se da estilo a la etiqueta body*/
+body {
+	margin: 0px;
+	color: #444;
+	background-color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/*Se da estilo a la etiqueta con identificador de id: #container*/
+#container {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	width: 800px;
+	border: 5px solid #ccc;_
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+
+
+/*Se da estilo a las etiquetas h1...h6*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	color: #21759b;
+}
+/*Se añade un largo de fondo a cada etiqueta h1...h4*/
+h1 {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 17px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
+
+/*Se da estilo a la etiqueta a*/
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #21759b;
+}
+/*Se aplica el efecto hover a la etiqueta a*/
+a:hover {
+	color: #bf0100;
+	padding-left: 3px;
+}
+
+
+/*Se da estilo a la etiqueta con identificador de id: #header*/
+#header {
+	height: 70px;
+	padding-top: 1px;
+	background: #f7f7f7;
+	padding-left: 10px;
+	text-align: left;
+}
+/*Se añade estilo a la etiqueta h1 que esta dentro de la etiqueta con identificador de id: #header*/
+#header h1 {
+	font-size: 30px;
+	font-family: "Times New Roman", Times, serif;
+	color: #bf0100;
+	text-shadow: 0px 0px 2px #444;
+}
+
+/********************Menu***********************/
+
+/*Se da estilo a la etiqueta con identificador de id: #menu*/
