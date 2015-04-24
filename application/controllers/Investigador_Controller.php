@@ -7,7 +7,7 @@ class Investigador_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('editarInvestigador_view');
+		$this->load->view('Investigador_view');
 	}
 
 	/**
@@ -56,6 +56,18 @@ class Investigador_Controller extends CI_Controller{
 			redirect('Investigador_Controller');
 		
 		
+	}
+	
+	/**
+	 * Funcion para eliminar un investigador de la base de datos a traves del id.
+	 */
+	function eliminar(){
+		$this->load->helper('url');
+		$id=$this->input->post('documento');
+		
+		$this->load->model('Investigador_Model');
+		$this->Investigador_Model->eliminar($id);
+		redirect('Investigador_Controller');
 	}
 	
 }

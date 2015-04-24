@@ -30,7 +30,14 @@ class Investigador_Model extends CI_Model{
 						
 			$this->db->where('documento', $id);
 			$this->db->update('INVESTIGADOR', $investigador);
-			
-						
-	}
+		}
+		
+		/**
+		 * Metodo para eliminar un investigador de la base de datos, mediante su documento.
+		 * @param unknown $id, documento del investigador.
+		 */
+		function eliminar($id){
+			$this->db->where('documento',$id);
+			$this->db->delete('INVESTIGADOR');
+		}
 }
