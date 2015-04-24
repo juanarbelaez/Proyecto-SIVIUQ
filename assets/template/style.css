@@ -76,5 +76,20 @@ a:hover {
 }
 
 /********************Menu***********************/
-
 /*Se da estilo a la etiqueta con identificador de id: #menu*/
+
+
+/****************Contenido*********************/
+
+
+/****************Footer************************/
+/*Se da estilo a la etiqueta con identificador de id: #footer*/
+#footer {
+	clear: both;
+	width: 800px;
+	padding: 5px 0px 5px 0px;
+	background: #ddd;
+	font-size: 10px;
+	text-align: center;
+	color: #444;
+}
