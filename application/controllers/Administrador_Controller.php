@@ -60,17 +60,16 @@ class Administradorr_Controller extends CI_Controller{
 	function descargarConvocatoria(){
 	
 	
-		$query = $this->db->get('formatos');
+		$query = $this->db->get('convocatoria');
 	
 		foreach ($query->result() as $row)
 		{
 	
-			$n_convocatoria=$row->NAME_CONVOCATORIA;
-			$convocatoria=$row->CONVOCATORIA;
+			$convocatoria=$row->DOCUMENTO;
 	
 		}
 		$data = file_get_contents($convocatoria); // Read the file's contents
-		$name =  $n_convocatoria;
+		$name =  "convocatoria.pdf";
 		force_download($name, $data);
 	}
 	

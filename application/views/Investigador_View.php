@@ -11,7 +11,7 @@
 <br>
 <h2>Ingresar Investigador</h2>
 <br>
-<form  action="<?php echo base_url(); ?>index.php/Investigador_Controller/insertar" method="post" name="form">
+<form  action="<?php echo base_url(); ?>index.php/Investigador_Controller/listarInvestigadoresGrupoInvestigacion" method="post" name="form">
 
 <label>Programa: <input type="text" name="programa"></label>
 <br>

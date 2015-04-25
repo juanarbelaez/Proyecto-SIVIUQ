@@ -4,6 +4,7 @@ class Investigador_Controller extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
+		$this->load->model('Investigador_Model');
 	}
 
 	function index(){
@@ -70,4 +71,12 @@ class Investigador_Controller extends CI_Controller{
 		redirect('Investigador_Controller');
 	}
 	
+	
+	function listarInvestigadoresGrupoInvestigacion(){
+		$nombre= $this->input->post('grupo_investigacion');
+		
+		$this->load->model('Investigador_Model');
+		$data['data']= $this->Investigador_Model->listarInvestigadoresGrupoInvestigacion($nombre);
+	$this->load->view('Tabla_View', $data);		
+	}
 }
