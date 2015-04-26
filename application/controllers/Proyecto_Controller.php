@@ -8,11 +8,13 @@ class Proyecto_Controller extends CI_Controller{
 	
 	function index(){
 		
+		$this->load->view('header', array('titulo' => "Crear Proyecto"));
 		$this->load->model('Convocatoria_Model');
-
 		$data['listaConvocatoria']=$this->Convocatoria_Model->listarConvocatorias();
 		$this->load->view('Proyecto_view', $data);
-	}
+		$this->load->view('footer');
+		
+			}
 	
 	/**
 	 * funcion para insertar un proyecto con los datos que llegan desde Proyecto_View.
@@ -69,31 +71,5 @@ class Proyecto_Controller extends CI_Controller{
 	
 	}
 	
-	function listarProyectosConvocatoria(){
-		
-		$idConvocatoria=$this->input->post('convocatoria');
-		$this->load->model('Proyecto_Model');
-		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosConvocatoria($idConvocatoria);
-		$this->load->view('Listar_Proyectos_View', $data);
-		
-	}
 	
-	function listarProyectosInvestigador(){
-	
-		$idInvestigador=$this->input->post('investigador_principal');
-		$this->load->model('Proyecto_Model');
-		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosInvestigador($idInvestigador);
-		$this->load->view('Listar_Proyectos_View', $data);
-	
-	}
-	
-	
-	function listarProyectosGrupoInvestigacion(){
-	
-		$nombreGrupo=$this->input->post('grupo_investigacion');
-		$this->load->model('Proyecto_Model');
-		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosGrupoInvestigacion($nombreGrupo);
-		$this->load->view('Listar_Proyectos_View', $data);
-	
-	}
 }

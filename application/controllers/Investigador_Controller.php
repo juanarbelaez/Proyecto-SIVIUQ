@@ -4,7 +4,7 @@ class Investigador_Controller extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('Investigador_Model');
+// 		$this->load->model('Investigador_Model');
 	}
 
 	function index(){

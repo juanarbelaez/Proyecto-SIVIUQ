@@ -1,13 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Administradorr_Controller extends CI_Controller{
+class Administrador_Controller extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();
 	}
 
 	function index(){
-		$this->load->view('Administrador_view');
+		$this->load->view('header', array('titulo' => "Administrador"));
+		$this->load->view('Administrador_View');
+		$this->load->view('footer');
 	}
 	
 

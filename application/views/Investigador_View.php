@@ -1,4 +1,3 @@
-	<h2>Ingresar Investigador</h2>
 	<br></br>
 	<form id="formulario" action="<?php echo base_url(); ?>index.php/Investigador_Controller/listarInvestigadoresGrupoInvestigacion" method="post" name="form">
 

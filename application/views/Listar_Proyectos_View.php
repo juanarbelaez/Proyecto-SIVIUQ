@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Tabla</title>
-</head>
-<body>
 
-<h1>Tabla</h1>
-<br>
 	<table>
 		<tr>
 			<td>Facultad </td>
@@ -56,6 +47,3 @@
 	
 	</table>
 
-
-</body>
-</html>

@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Proyecto Investigación</title>
-</head>
-<body>
 
-<h1>Proyecto de Investigación</h1>
-<br>
-<br>
-<h2>Registrar Proyecto</h2>
+<!-- <h2>Registrar Proyecto</h2> -->
 <br>
 <form  action="<?php echo base_url(); ?>index.php/Proyecto_Controller/insertar" method="post" name="form">
 
@@ -70,6 +60,3 @@
 <input type="submit" name="Guardar" value="Guardar">
 
 </form>
-
-</body>
-</html>
