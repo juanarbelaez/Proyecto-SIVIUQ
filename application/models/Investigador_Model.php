@@ -105,15 +105,6 @@ class Investigador_Model extends CI_Model{
 			
 			
 			$data[]=$listaInvestigadores->result();
-// 			foreach ($listaInvestigadores->result() as $row){
-// 				echo $row->NOMBRE;
-// 				echo $row->DOCUMENTO;
-// 				echo $row->FACULTAD;
-// 				echo $row->PROGRAMA;
-// 				echo $row->GRUPO_INVESTIGACION;
-// 				echo $row->TIPO_VINCULACION;
-// 				echo"<br>";
-// 			}
 
 			}
 			return $data;

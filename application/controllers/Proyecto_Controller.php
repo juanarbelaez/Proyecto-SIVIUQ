@@ -7,7 +7,11 @@ class Proyecto_Controller extends CI_Controller{
 	}
 	
 	function index(){
-		$this->load->view('Proyecto_view');
+		
+		$this->load->model('Convocatoria_Model');
+
+		$data['listaConvocatoria']=$this->Convocatoria_Model->listarConvocatorias();
+		$this->load->view('Proyecto_view', $data);
 	}
 	
 	/**
@@ -16,9 +20,13 @@ class Proyecto_Controller extends CI_Controller{
 	function insertar(){
 	
 		$this->load->helper('url');
+		$idConvocatoria=  $this->input->post('convocatoria');
 		$proyecto= array(
+				'FACULTAD'=>$this->input->post('facultad'),
+				'PROGRAMA'=> $this->input->post('programa'),
+				'ANIO_INICIO'=> $this->input->post('anio_inicio'),
 				'TITULO'=> $this->input->post('titulo'),
-				'IDENTIFICACION'=> $this->input->post('identificacion'),
+				'NUMERO'=> $this->input->post('numero'),
 				'DURACION'=> $this->input->post('duracion'),
 				'GRUPO_INVESTIGACION'=> $this->input->post('grupo_investigacion'),
 				'LINEA_INVESTIGACION'=> $this->input->post('linea_investigacion'),
@@ -29,8 +37,9 @@ class Proyecto_Controller extends CI_Controller{
 	
 	
 		$this->load->model('Proyecto_Model');
-		$this->Proyecto_Model->insertar($proyecto);
-			redirect('Proyecto_Controller');
+		$this->Proyecto_Model->insertar($proyecto, $idConvocatoria);
+	
+		
 	
 	}
 	
@@ -58,6 +67,15 @@ class Proyecto_Controller extends CI_Controller{
 		redirect('Proyecto_Controller');
 	
 	
+	}
+	
+	function listarProyectosConvocatoria(){
+		
+		$idConvocatoria=$this->input->post('convocatoria');
+		$this->load->model('Proyecto_Model');
+		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosConvocatoria($idConvocatoria);
+		$this->load->view('Listar_Proyectos_Convocatoria_View', $data);
+		
 	}
 	
 }
