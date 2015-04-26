@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="././assets/template/style.css">
-		<title>Titulo</title>
+		<title><?php $titulo ?></title>
 	</head>
 
 	<body>
 		<!--Donde _header es un parcial en el que se declarara lo que formara parte de la cabezera-->
 		<?php
-			echo $this->load->view('_header');
+			echo $this->load->view('header');
 		?>
 		<div id = "content">
 			<div id = "left">
@@ -27,7 +27,7 @@
 		</div>
 				<!--Donde _footer es un parcial en el que se declarara lo que formara parte del pie de pagina-->
 				<?php
-					echo $this->load->view('_footer');
+					echo $this->load->view('footer');
 				?>
 	</body>
 </html>

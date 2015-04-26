@@ -10,7 +10,7 @@ body {
 }
 
 /*Se da estilo a la etiqueta con identificador de id: #container*/
-#container {
+/*#container {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -20,14 +20,14 @@ body {
 	margin-right: auto;
 	padding-top: 3px;
 	padding-bottom: 2px;
-}
+}*/
 
 
 /*Se da estilo a las etiquetas h1...h6*/
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	color: #21759b;
-}
+}*/
 /*Se añade un largo de fondo a cada etiqueta h1...h4*/
 h1 {
 	font-size: 20px;
@@ -61,18 +61,29 @@ a:hover {
 
 /*Se da estilo a la etiqueta con identificador de id: #header*/
 #header {
-	height: 70px;
+	height: 120px;
 	padding-top: 1px;
-	background: #f7f7f7;
+	padding-bottom: 1px;
+	background: #00923F;
 	padding-left: 10px;
-	text-align: left;
+	padding-right: 10px;	
+
 }
 /*Se añade estilo a la etiqueta h1 que esta dentro de la etiqueta con identificador de id: #header*/
 #header h1 {
-	font-size: 30px;
+	font-size: 55px;
 	font-family: "Times New Roman", Times, serif;
-	color: #bf0100;
-	text-shadow: 0px 0px 2px #444;
+	color: #FFF;
+	text-shadow: 10px 10px 12px #444;
+	text-align: center; 
+}
+/*Se añade estilo a la etiqueta img que esta dentro de la etiqueta con identificador id: #header. Esta contiene el logo uniquindio*/
+#header img {
+	width: 120px;
+	height: 120px;
+	text-align: left; 
+	border-radius: 20px;
+	text-align: left;
 }
 
 /********************Menu***********************/
@@ -80,6 +91,131 @@ a:hover {
 
 
 /****************Contenido*********************/
+/*Se da estilo a la etiqueta div con idntificador de id: #contenedor*/
+/*#contenedor {
+	/*Se estilo a los bordes, tamaño, estilo, color y forma*/
+	/*border-style: solid;
+	border-color: #90EE90;
+	border-top-width: 5px;
+	border-right-width: 5px;
+	border-bottom-width: 5px;
+	border-left-width: 5px;
+	border-radius: 10px;
+	/*Se dimensiona el contenedor*/
+	/*margin-right: auto;
+	margin-left: auto;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	width: 1000px;*/
+
+	/*Se estilo a los bordes, tamaño, estilo, color y forma*/
+	/*border-radius: 20px 20px 20px 20px;
+	/*Para navegadores firefox*/
+	/*-moz-border-radius: 20px 20px 20px 20px;
+	/*Para navegadores safari y chrome*/
+	/*-webkit-border-radius: 20px 20px 20px 20px;
+	border: 8px solid #90EE90;
+	/*Se dimensiona el contenedor*/
+	/*margin-right: auto;
+	margin-left: auto;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	width: 1000px;
+}*/
+
+/*#contenedor label {
+	font-family: verdana,sans-serif;
+	color: #008080;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 2;
+	vertical-align: middle;
+	display: table-cell;
+}*/
+#contenedor{
+	border:solid 2px #b7ddf2;
+	background:#ebf4fb;
+	/*Se estilo a los bordes, tamaño, estilo, color y forma*/
+	border-radius: 20px 20px 20px 20px;
+	/*Para navegadores firefox*/
+	-moz-border-radius: 20px 20px 20px 20px;
+	/*Para navegadores safari y chrome*/
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border: 8px solid #90EE90;
+	/*Se dimensiona el contenedor*/
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	width: 1000px;
+}
+
+#contenedor h2 {
+	padding: 5px 0px 5px 0px;
+	color: #008080;
+	text-align: center;
+}
+
+#contenedor  label input  {
+	display: block;	
+     width: 150px;
+     float: right;
+}
+
+#contenedor label {
+    text-align: right;
+    width: 75px;
+    padding-left: 300px;
+    font-family: verdana,sans-serif;
+	color: #008080;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#contenedor input {
+	border-right-width: 2px;
+	margin-right: 300px;
+	border-style: solid;
+	border-color: #90EE90;
+}
+
+#contenedor br {
+	clear: right;
+}
+
+#contenedor #guardar {
+	margin-left: 440px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-color: #90EE90;
+	border-radius: 20px 20px 20px 20px;
+	width: 120px;
+	}
+/*#contenedor h2 {
+	padding: 5px 0px 5px 0px;
+	color: #008080;
+	text-align: center;
+}
+
+#contenedor label{
+	display:block;
+	font-weight:bold;
+	text-align:center;
+	width:100px;
+	float:none;
+}
+
+#contenedor input{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:100px;
+	margin:2px 0 20px 10px;
+}*/
 
 
 /****************Footer************************/
@@ -87,9 +223,11 @@ a:hover {
 #footer {
 	clear: both;
 	width: 800px;
-	padding: 5px 0px 5px 0px;
-	background: #ddd;
+	padding: 5px 5px 5px 5px;
+	/*background: #ddd;*/
 	font-size: 10px;
 	text-align: center;
 	color: #444;
+	margin-left: 300px;
+	margin-top: 20px;
 }

@@ -1,47 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Investigador</title>
-</head>
-<body>
+<br>
+<br>
+<div id="contenedor" class="miFormulario">
 
-<h1>Investigador</h1>
-<br>
-<br>
-<h2>Ingresar Investigador</h2>
-<br>
-<form  action="<?php echo base_url(); ?>index.php/Investigador_Controller/listarInvestigadoresGrupoInvestigacion" method="post" name="form">
+	<h2>Ingresar Investigador</h2>
+	<br></br>
+	<form id="formulario" action="<?php echo base_url(); ?>index.php/Investigador_Controller/listarInvestigadoresGrupoInvestigacion" method="post" name="form">
 
-<label>Programa: <input type="text" name="programa"></label>
-<br>
-<br>
-<label>Facultad: <input type="text" name="facultad"></label>
-<br>
-<br>
-<label>Grupo de Investigación: <input charset="utf-8" type="text" name="grupo_investigacion"></label>
-<br>
-<br>
-<label>Tipo de Vinculación: <input charset="utf-8" type="text" name="tipo_vinculacion"></label>
-<br>
-<br>
-<label>Nombre: <input type="text" name="nombre"></label>
-<br>
-<br>
-<label>Documento: <input type="text" name="documento"></label>
-<br>
-<br>
+	<label>Programa: <input id="programa" class="programa" type="text" name="programa"></label><br></br> <br></br>
+	<label>Facultad: <input id="facultad" class="facultad" type="text" name="facultad"></label><br></br> <br></br>
+	<label>Grupo de Investigación:  <input id="grupo" class="grupo" type="text" name="grupo_investigacion"></label><br></br> <br></br>
+	<label>Tipo de Vinculación: <input id="vinculacion" class="vinculacion" type="text" name="tipo_vinculacion"></label><br></br> <br></br>
+	<label>Nombre: <input id="nombre" class="nombre" type="text" name="nombre"></label><br></br> <br></br>
+	<label>Documento: <input id="documento" class="documento" type="text" name="documento"></label><br></br> <br></br>
+	<label>Numero Celular: <input id="numCel" class="numCel" type="text" name="celular"></label><br></br> <br></br>
+	<label>Correo Electronico: <input id="email" class="email" type="text" name="correo"></label><br></br> <br></br>
+	<input id="guardar" class="guardar" type="submit" name="Guardar" value="Guardar">
+	<div class="spacer"></div>
 
-<label>Numero Celular: <input type="text" name="celular"></label>
-<br>
-<br>
-<label>Correo Electronico: <input type="text" name="correo"></label>
-<br>
-<br>
-<input type="submit" name="Guardar" value="Guardar">
-
-</form>
-
-
-</body>
-</html>
+	</form>
+</div>
