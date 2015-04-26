@@ -12,7 +12,10 @@
 			<h1>SIVI-UQ</h1>
 		</div><!-- End Header -->
 
-		
+		<br>
+		<br>
+	<div id="contenedor" class="miFormulario">
+
 		<!--<div id="menu">
 	<ul>
 		<li><?=anchor('products', 'Home');?></li>	

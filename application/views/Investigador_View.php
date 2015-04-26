@@ -1,7 +1,3 @@
-<br>
-<br>
-<div id="contenedor" class="miFormulario">
-
 	<h2>Ingresar Investigador</h2>
 	<br></br>
 	<form id="formulario" action="<?php echo base_url(); ?>index.php/Investigador_Controller/listarInvestigadoresGrupoInvestigacion" method="post" name="form">
@@ -15,7 +11,6 @@
 	<label>Numero Celular: <input id="numCel" class="numCel" type="text" name="celular"></label><br></br> <br></br>
 	<label>Correo Electronico: <input id="email" class="email" type="text" name="correo"></label><br></br> <br></br>
 	<input id="guardar" class="guardar" type="submit" name="Guardar" value="Guardar">
-	<div class="spacer"></div>
 
 	</form>
-</div>
+
