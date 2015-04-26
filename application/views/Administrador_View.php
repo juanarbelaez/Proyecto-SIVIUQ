@@ -1,4 +1,4 @@
-<div>
+
 <h2> Utilidades</h2>
 
 <form id="formulario4" action="<?php echo base_url(); ?>index.php/Proyecto_Controller" name="form4">
@@ -17,9 +17,9 @@
  <br>
 <br>
 
-</div>
 
-<div>
+
+
 <h2>Archivos</h2>
 
  <br>
@@ -32,5 +32,3 @@
 </form>
  <form id="formulario2" action="<?php echo base_url(); ?>index.php/Administrador_Controller/descargarCuadro" name="form2">
  <input value="Descargar Cuadro Presupuesto" type="submit" name="Descargar_Cuadro">    </form> 
-
- </div>

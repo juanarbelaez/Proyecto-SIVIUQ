@@ -1,6 +1,7 @@
 /*Se da estilo a la etiqueta body*/
 body {
 	margin: 0px;
+	margin-top: -30px;
 	color: #444;
 	background-color: #ffffff;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -151,6 +152,8 @@ a:hover {
 	margin-left: auto;
 	padding-top: 3px;
 	padding-bottom: 2px;
+	padding-left: 50px;
+	padding-right: 50px;
 	width: 1000px;
 }
 
@@ -182,6 +185,8 @@ a:hover {
 	margin-right: 300px;
 	border-style: solid;
 	border-color: #90EE90;
+	border-radius: 20px 20px 20px 20px;
+	text-align: center;
 }
 
 #contenedor br {
@@ -206,7 +211,8 @@ a:hover {
 	width: 90%;
 	text-align: center;
 	margin: 20px;
-	margin-left: 50px;
+	margin-right: 0px;	
+	margin-left: 0px;
 }
 
 #contenedor table th {
@@ -214,7 +220,7 @@ a:hover {
 	background-color: #90EE90;
 	border: 1px solid #008080;
 	border-radius: 1px 1px 1px 1px;
-	width: 200px;
+	width: 100px;
 	text-align: center;
 	padding: 0.2em;
 }
@@ -223,10 +229,54 @@ a:hover {
 	border-spacing: 0;
 	border: 1px solid #008080;
 	border-radius: 1px 1px 1px 1px;
-	width: 200px;
+	width: 100px;
 	text-align: center;
 	padding: 0.2em;
 }
+
+/**************************************Formularios***********************************/
+/*Se da estilo a la etiqueta form con identificador de clase y id: #formulario, .formulario*/
+#formulario {
+	margin-bottom: 40px;
+}
+
+#formulario #boton {
+	font-size: 10px;
+	font-family: Verdana,Helvetica;
+    font-weight: bold;
+    color:white;
+	background: #6495ED;
+	border-style:  solid;
+	border-color: #90EE90;
+	width:100px;
+	height:25px;
+	text-align: center;
+	margin-right: 450px;
+	margin-left: 450px;
+	margin-top: 30px;
+}
+
+#formulario select {
+	font-size: 10px;
+	font-family: Verdana,Helvetica;
+    font-weight: bold;
+    color:#008080;
+	background: #ebf4fb;
+	border-style: solid;
+	border-color: #90EE90;
+	border-radius: 2px 2px 2px 2px;
+	width:150px;
+	height:25px;
+	text-align: center;
+}
+
+#formulario #formatos {
+	width: 200px;
+	height: 20px;
+	border-radius: 0px 0px 0px 0px;
+	border-style: none;
+}
+
 /*#contenedor h2 {
 	padding: 5px 0px 5px 0px;
 	color: #008080;

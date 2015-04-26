@@ -1,4 +1,6 @@
-	<br></br>
+<h2>Datos del investigador</h2>
+<br>
+<br>
 	<form id="formulario" action="<?php echo base_url(); ?>index.php/Investigador_Controller/insertar" method="post" name="form">
 
 	<label>Programa: <input id="programa" class="programa" type="text" name="programa"></label><br></br> <br></br>
@@ -9,7 +11,7 @@
 	<label>Documento: <input id="documento" class="documento" type="text" name="documento"></label><br></br> <br></br>
 	<label>Numero Celular: <input id="numCel" class="numCel" type="text" name="celular"></label><br></br> <br></br>
 	<label>Correo Electronico: <input id="email" class="email" type="text" name="correo"></label><br></br> <br></br>
-	<input id="guardar" class="guardar" type="submit" name="Guardar" value="Guardar">
+	<input id="boton" class="boton" type="submit" name="Guardar" value="Guardar">
 
 	</form>
 
