@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Tabla</title>
-</head>
-<body>
 
-<h1>Tabla</h1>
-<br>
 	<table>
 		<tr>
-			<td>Programa </td>
-			<td>Facultad</td>
-			<td>Grupo </td>
-			<td>Tipo Vinculacion </td>
-			<td>Nombre</td>
-			<td>Documento</td>
-			<td>Celular</td>
-			<td>Correo </td>
+			<td> <h3>Programa</h3> </td>
+			<td><h3>Facultad</h3></td>
+			<td><h3>Grupo </h3></td>
+			<td><h3>Tipo Vinculacion</h3> </td>
+			<td><h3>Nombre</h3></td>
+			<td><h3>Documento</h3></td>
+			<td><h3>Celular</h3></td>
+			<td><h3>Correo </h3></td>
 			</tr>
 			
 			<?php 
 			if($data!=false){
-				echo count($data);
 				for($i=0; $i<count($data); $i++){
 				
 				foreach ($data[$i] as $row){
@@ -52,6 +42,3 @@
 	
 	</table>
 
-
-</body>
-</html>

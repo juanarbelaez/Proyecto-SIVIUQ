@@ -79,6 +79,8 @@ class Investigador_Controller extends CI_Controller{
 		
 		$this->load->model('Investigador_Model');
 		$data['data']= $this->Investigador_Model->listarInvestigadoresGrupoInvestigacion($nombre);
-	$this->load->view('Tabla_View', $data);		
+		$this->load->view('header', array('titulo' => "Tabla Investigadores Grupo Investigación"));
+		$this->load->view('Tabla_View', $data);
+		$this->load->view('footer');
 	}
 }
