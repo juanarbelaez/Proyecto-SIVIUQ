@@ -25,5 +25,3 @@
 			
 	</ul>
 </div>--><!-- End Menu -->
-
-	<h2> <?= $titulo?></h2>

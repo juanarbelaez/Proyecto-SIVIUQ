@@ -86,11 +86,14 @@ a:hover {
 	text-align: left;
 }
 
-/********************Menu***********************/
+/****************************************Menu*********************************************/
 /*Se da estilo a la etiqueta con identificador de id: #menu*/
 
 
-/****************Contenido*********************/
+
+
+/*************************************Contenido******************************************/
+
 /*Se da estilo a la etiqueta div con idntificador de id: #contenedor*/
 /*#contenedor {
 	/*Se estilo a los bordes, tamaño, estilo, color y forma*/
@@ -158,7 +161,7 @@ a:hover {
 }
 
 #contenedor  label input  {
-	display: block;	
+	 display: block;	
      width: 150px;
      float: right;
 }
@@ -194,6 +197,36 @@ a:hover {
 	border-radius: 20px 20px 20px 20px;
 	width: 120px;
 	}
+
+#contenedor table {
+	border-spacing: 0;
+	border-style: solid;
+	border-radius: 5px 5px 5px 5px;
+	border-color: #008080;
+	width: 90%;
+	text-align: center;
+	margin: 20px;
+	margin-left: 50px;
+}
+
+#contenedor table th {
+	border-spacing: 0;
+	background-color: #90EE90;
+	border: 1px solid #008080;
+	border-radius: 1px 1px 1px 1px;
+	width: 200px;
+	text-align: center;
+	padding: 0.2em;
+}
+
+#contenedor table td {
+	border-spacing: 0;
+	border: 1px solid #008080;
+	border-radius: 1px 1px 1px 1px;
+	width: 200px;
+	text-align: center;
+	padding: 0.2em;
+}
 /*#contenedor h2 {
 	padding: 5px 0px 5px 0px;
 	color: #008080;

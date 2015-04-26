@@ -1,15 +1,15 @@
-
+<h2> <?= $titulo?></h2>
 	<table>
 		<tr>
-			<td> <h3>Programa</h3> </td>
-			<td><h3>Facultad</h3></td>
-			<td><h3>Grupo </h3></td>
-			<td><h3>Tipo Vinculacion</h3> </td>
-			<td><h3>Nombre</h3></td>
-			<td><h3>Documento</h3></td>
-			<td><h3>Celular</h3></td>
-			<td><h3>Correo </h3></td>
-			</tr>
+			<th><h3>Programa</h3></th>
+			<th><h3>Facultad</h3></th>
+			<th><h3>Grupo </h3></th>
+			<th><h3>Tipo Vinculacion</h3></th>
+			<th><h3>Nombre</h3></th>
+			<th><h3>Documento</h3></th>
+			<th><h3>Celular</h3></th>
+			<th><h3>Correo </h3></th>
+		</tr>
 			
 			<?php 
 			if($data!=false){
@@ -19,7 +19,7 @@
 					
 					
 			
-				echo "<tr>";
+			echo "<tr>";
 			echo "<td>". $row->PROGRAMA . "</td>";
 			echo "<td>".$row->FACULTAD. "</td>";
 			echo "<td>".$row->GRUPO_INVESTIGACION. "</td>";
