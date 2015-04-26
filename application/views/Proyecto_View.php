@@ -11,7 +11,7 @@
 <br>
 <h2>Registrar Proyecto</h2>
 <br>
-<form  action="<?php echo base_url(); ?>index.php/Proyecto_Controller/listarProyectosConvocatoria" method="post" name="form">
+<form  action="<?php echo base_url(); ?>index.php/Proyecto_Controller/insertar" method="post" name="form">
 
 
 <label> Convocatoria: <?php  echo count($listaConvocatoria);?>

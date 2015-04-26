@@ -129,4 +129,59 @@ class Proyecto_Model extends CI_Model{
 			echo "el proyecto no existe";
 		}
 	}
+	
+	function listarProyectosInvestigador($idInvestigador){
+		$query= $this->db->get_where('INVESTIGADOR', array('DOCUMENTO'=> $idInvestigador));
+			
+		foreach ($query->result() as $row){
+			$idInvestigador=$row->DOCUMENTO;
+		}
+			
+		if(isset($idInvestigador)){
+	
+			$query2= $this->db->get_where('PROYECTO_INVESTIGADOR', array('fk_INVESTIGADOR'=> $idInvestigador));
+			foreach ($query2->result() as $row){
+				$idProyecto= $row->FK_PROYECTO;
+					
+					
+				$listaProyectos=$this->db->get_where('PROYECTO', array('NUMERO'=>$idProyecto));
+					
+					
+				$data[]=$listaProyectos->result();
+	
+			}
+			return $data;
+		}
+		else{
+			echo "el proyecto no existe";
+		}
+	}
+	
+	function listarProyectosGrupoInvestigacion($nombreGrupo){
+		$query= $this->db->get_where('GRUPO_INVESTIGACION', array('NOMBRE'=> $nombreGrupo));
+			
+		foreach ($query->result() as $row){
+			$idGrupo=$row->IDENTIFICACION;
+		}
+			
+		if(isset($idGrupo)){
+	
+			$query2= $this->db->get_where('PROYECTO_GRUPO_INVEST', array('fk_GRUPO'=> $idGrupo));
+			foreach ($query2->result() as $row){
+				$idProyecto= $row->FK_PROYECTO;
+					
+					
+				$listaProyectos=$this->db->get_where('PROYECTO', array('NUMERO'=>$idProyecto));
+					
+					
+				$data[]=$listaProyectos->result();
+	
+			}
+			return $data;
+		}
+		else{
+			echo "el proyecto no existe";
+		}
+	}
+	
 }

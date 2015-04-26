@@ -74,8 +74,26 @@ class Proyecto_Controller extends CI_Controller{
 		$idConvocatoria=$this->input->post('convocatoria');
 		$this->load->model('Proyecto_Model');
 		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosConvocatoria($idConvocatoria);
-		$this->load->view('Listar_Proyectos_Convocatoria_View', $data);
+		$this->load->view('Listar_Proyectos_View', $data);
 		
 	}
 	
+	function listarProyectosInvestigador(){
+	
+		$idInvestigador=$this->input->post('investigador_principal');
+		$this->load->model('Proyecto_Model');
+		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosInvestigador($idInvestigador);
+		$this->load->view('Listar_Proyectos_View', $data);
+	
+	}
+	
+	
+	function listarProyectosGrupoInvestigacion(){
+	
+		$nombreGrupo=$this->input->post('grupo_investigacion');
+		$this->load->model('Proyecto_Model');
+		$data['listaProyectos']= $this->Proyecto_Model->listarProyectosGrupoInvestigacion($nombreGrupo);
+		$this->load->view('Listar_Proyectos_View', $data);
+	
+	}
 }
