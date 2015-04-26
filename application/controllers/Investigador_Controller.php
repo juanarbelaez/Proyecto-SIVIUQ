@@ -8,7 +8,9 @@ class Investigador_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('Investigador_view');
+		$this->load->view('header', array('titulo' => "Crear Investigador"));
+		$this->load->view('Investigador_View');
+		$this->load->view('footer');
 	}
 
 	/**
