@@ -1,5 +1,5 @@
 	<br></br>
-	<form id="formulario" action="<?php echo base_url(); ?>index.php/Investigador_Controller/listarInvestigadoresGrupoInvestigacion" method="post" name="form">
+	<form id="formulario" action="<?php echo base_url(); ?>index.php/Investigador_Controller/insertar" method="post" name="form">
 
 	<label>Programa: <input id="programa" class="programa" type="text" name="programa"></label><br></br> <br></br>
 	<label>Facultad: <input id="facultad" class="facultad" type="text" name="facultad"></label><br></br> <br></br>

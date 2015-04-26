@@ -1,17 +1,17 @@
 
 	<table>
 		<tr>
-			<td>Facultad </td>
-			<td>Programa</td>
-			<td>Año Inicio</td>
-			<td>Titulo</td>
-			<td>Numero</td>
-			<td>Duración</td>
-			<td>Grupo Investigación</td>
-			<td>Linea Investigación</td>
-			<td>Identificación Investigador</td>
-			<td>Estado</td>
-			<td>Detalles</td>
+			<th><h3>Facultad</h3> </th>
+			<th><h3>Programa</h3></th>
+			<th><h3>Año Inicio</h3></th>
+			<th><h3>Titulo</h3></th>
+			<th><h3>Numero</h3></th>
+			<th><h3>Duración</h3></th>
+			<th><h3>Grupo Investigación</h3></th>
+			<th><h3>Linea Investigación</h3></th>
+			<th><h3>Identificación Investigador</h3></th>
+			<th><h3>Estado</h3></th>
+			<th><h3>Detalles</h3></th>
 			
 			</tr>
 			

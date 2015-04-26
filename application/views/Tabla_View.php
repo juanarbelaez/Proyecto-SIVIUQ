@@ -1,4 +1,3 @@
-<h2> <?= $titulo?></h2>
 	<table>
 		<tr>
 			<th><h3>Programa</h3></th>
