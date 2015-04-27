@@ -55,8 +55,8 @@ a {
 }
 /*Se aplica el efecto hover a la etiqueta a*/
 a:hover {
-	color: #bf0100;
-	padding-left: 3px;
+	color: #191970;
+	padding-left: 20px;
 }
 
 
@@ -89,9 +89,142 @@ a:hover {
 
 /****************************************Menu*********************************************/
 /*Se da estilo a la etiqueta con identificador de id: #menu*/
+#navegadorMenu li {
+	list-style:none;
+    height:39px;
+    padding:2px;
+    /*width:20px;*/
+}
 
+#navegadorMenu span {
+/*Propiedades del contenedor*/
+    /*width:0;
+    left:38px;*/
+    padding:0;
+    position:absolute;
+    overflow:hidden;
+    margin-left: 25px;
 
+ /*Propiedades del texto*/
+    /*font-family:'Myriad Pro',Arial, Helvetica, sans-serif;*/
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:0.6px;
+    white-space:nowrap;
+    line-height:39px;
 
+ /* Transiciones CSS3 */
+    -webkit-transition: 0.25s;
+
+ /* Future proofing (these do not work yet): */
+    -moz-transition: 0.25s;
+    transition: 0.25s;
+}
+
+#navegadorMenu a {
+    background:#90EE90;
+    height:39px;
+    width:240px;
+    display:block;
+    position:relative;
+    border-style: solid;
+    border-radius: 3px 3px 3px 3px;
+    border-color: white;
+}
+
+/*Estilos hovers generales*/
+#navegadorMenu a:hover span{
+	width:auto; 
+	padding:0 20px;
+	overflow:visible;
+}
+
+#navegadorMenu a:hover {
+	text-decoration:none;
+
+ /*Propiedades box-shadow para lso diferentes navegadores */
+    -moz-box-shadow:0 0 5px #9ddff5;
+    -webkit-box-shadow:0 0 5px #9ddff5;
+    box-shadow:0 0 5px #9ddff5;
+}
+
+/***********Boton Registrar Proyecto****************/
+#navegadorMenu .formularioProyecto {
+	background-position:0 0;
+}
+
+#navegadorMenu .formularioProyecto:hover {
+	background-position:0 -39px;
+}
+
+#navegadorMenu .formularioProyecto span {
+    text-shadow:2px 2px 2px #FFF;
+}
+
+/***********Boton Registrar Investigador****************/
+#navegadorMenu .formularioInvestigador {
+	background-position:-38px 0;
+}
+
+#navegadorMenu .formularioInvestigador:hover {
+	background-position:-38px -39px;
+}
+
+#navegadorMenu .formularioInvestigador span {
+	 text-shadow:2px 2px 2px #FFF;
+}
+
+/***********Boton Listar****************/
+#navegadorMenu .formularioListar {
+	background-position:-76px 0;
+}
+
+#navegadorMenu .formularioListar:hover {
+	background-position:-76px -39px;
+}
+
+#navegadorMenu .formularioListar span {
+	text-shadow:2px 2px 2px #FFF;
+}
+
+/***********Boton Descargar Convocatoria****************/
+#navegadorMenu .formularioDConvocatoria {
+	background-position:-114px 0;
+}
+
+#navegadorMenu .formularioDConvocatoria:hover {
+	background-position:-114px -39px;
+}
+
+#navegadorMenu .formularioDConvocatoria span {
+	text-shadow:2px 2px 2px #FFF;
+}
+
+/***********Boton Descargar Formato****************/
+#navegadorMenu .formularioDFormato {
+	background-position:-152px 0;
+}
+
+#navegadorMenu .formularioDFormato:hover {
+	background-position:-152px -39px;
+}
+
+#navegadorMenu .formularioDFormato span {
+	text-shadow:2px 2px 2px #FFF;
+}
+
+/***********Boton Descargar Cuadro Presupuesto****************/
+#navegadorMenu .formularioDCPresupuesto {
+	background-position:-190px 0;
+}
+
+#navegadorMenu .formularioDCPresupuesto:hover {
+	background-position:-190px -39px;
+}
+
+#navegadorMenu .formularioDCPresupuesto span {
+	text-shadow:2px 2px 2px #FFF;
+}
 
 /*************************************Contenido******************************************/
 

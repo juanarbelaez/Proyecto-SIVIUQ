@@ -8,7 +8,7 @@
 
 	<body>
 		<div id="header">
-			<img src="<?= base_url();?>img/uniquindio.jpeg" align="left" >	
+			<a href="<?php echo base_url(); ?>index.php/Administrador_Controller" type="submit"><img src="<?= base_url();?>img/uniquindio.jpeg" align="left"></a>
 			<h1>SIVI-UQ</h1>
 		</div><!-- End Header -->
 
