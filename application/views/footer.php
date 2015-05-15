@@ -3,7 +3,7 @@
 		<p>Copyright &copy; 2015 Proyecto SIVI-UQ</p>
 		<br>
 		<p>Autores:</p>
-			<p>Juan Sebastian Florez Saavedra</p>
+			<p>Juan Sebastián Florez Saavedra</p>
 			<p>Jeison Julian Barbosa</p>
 			<p>Fabian David Osorio Sarmiento</p>
 	</div><!-- End Footer -->

@@ -25,7 +25,7 @@
 <label>Nombre: <input type="text" name="nombre"></label>
 <br>
 <br>
-<label>Identificación: <input type="text" name="identificacion"></label>
+<label>IdentificaciÃ³n: <input type="text" name="identificacion"></label>
 <br>
 <br>
 <label>Semestre: <input type="text" name="semestre"></label>

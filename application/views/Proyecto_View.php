@@ -18,12 +18,12 @@
 </label>
 <label>Facultad: <input type="text" name="facultad"></label><br><br>
 <label>Programa: <input type="text" name="programa"></label><br><br>
-<label>año inicio: <input type="text" name="anio_inicio"></label><br><br>
+<label>aÃ±o inicio: <input type="text" name="anio_inicio"></label><br><br>
 <label>Titulo: <input type="text" name="titulo"></label><br><br>
 <label>Numero: <input type="text" name="numero"></label><br><br>
-<label>Duración <input type="text" name="duracion"></label><br><br>
-<label>Grupo de Investigación: <input type="text" name="grupo_investigacion"></label><br><br>
-<label>Linea de Investigación: <input type="text" name="linea_investigacion"></label><br><br>
+<label>DuraciÃ³n <input type="text" name="duracion"></label><br><br>
+<label>Grupo de InvestigaciÃ³n: <input type="text" name="grupo_investigacion"></label><br><br>
+<label>Linea de InvestigaciÃ³n: <input type="text" name="linea_investigacion"></label><br><br>
 <label>Investigador Principal: <input type="text" name="investigador_principal"></label><br><br>
 <label>Estado: <input type="text" name="estado"></label><br><br>
 <label>Detalles: <input type="text" name="detalles"></label><br><br>

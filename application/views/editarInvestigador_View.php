@@ -25,10 +25,10 @@
 <label>Facultad: <input type="text" name="facultad"></label>
 <br>
 <br>
-<label>Grupo de Investigación: <input type="text" name="grupo_investigacion"></label>
+<label>Grupo de InvestigaciÃ³n: <input type="text" name="grupo_investigacion"></label>
 <br>
 <br>
-<label>Tipo de Vinculación: <input type="text" name="tipo_vinculacion"></label>
+<label>Tipo de VinculaciÃ³n: <input type="text" name="tipo_vinculacion"></label>
 <br>
 <br>
 <label>Nombre: <input type="text" name="nombre"></label>

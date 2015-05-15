@@ -4,7 +4,7 @@
 <label> Buscar por: </label>
 	<select name="tipo">
 				<option value= convocatoria> Convocatoria</option>
-				<option value= grupo_investigacion> Grupo Investigación</option>
+				<option value= grupo_investigacion> Grupo InvestigaciÃ³n</option>
 				<option value= investigador> Investigador</option>
 	</select>
 

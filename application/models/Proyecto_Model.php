@@ -70,7 +70,13 @@ class Proyecto_Model extends CI_Model{
 				);
 				$this->db->insert('CONVOCATORIA_PROYECTO', $data3);
 				
-				echo "se registro exitosamente";
+				$data4= array(
+					'FK_PROYECTO'=> $IdProyecto
+							
+				);
+				$this->db->insert('CONSEJO_CURRIC_PROGRAMA', $data4);
+				
+				echo "se envio al consejo curricular del programa para su debida evaluación";
 			}
 			else{
 				echo "No existe el investigador";

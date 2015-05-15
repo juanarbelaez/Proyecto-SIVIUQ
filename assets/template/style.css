@@ -337,6 +337,7 @@ a:hover {
 	}
 
 #contenedor table {
+	font-size: 11px;
 	border-spacing: 0;
 	border-style: solid;
 	border-radius: 5px 5px 5px 5px;
