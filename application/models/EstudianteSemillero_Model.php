@@ -26,10 +26,13 @@ class EstudianteSemillero_Model extends CI_Model{
 	 * @author, Fabian David Osorio Sarmiento
 	 */
 	function editar($id,$estudiante){
-	
 		$this->db->where('identificacion', $id);
 		$this->db->update('ESTUDIANTE_SEMILLERO', $estudiante);
-			
-	
+	}
+
+	function obtener($id){
+		$consulta = $this->db->get_where('ESTUDIANTE_SEMILLERO', array('identificacion' => $id) );
+		$resultado = $consulta->result();
+		return $resultado;
 	}
 }

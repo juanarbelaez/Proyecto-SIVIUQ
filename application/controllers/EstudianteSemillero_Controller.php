@@ -18,7 +18,7 @@ class EstudianteSemillero_Controller extends CI_Controller{
 		$this->load->helper('url');
 		$estudiante= array(
 				'SEMESTRE_SEMILLERO'=> $this->input->post('semestre_semillero'),
-				'FACULTAD'=> $this->input->post('facultad'),
+				'FACULTAD'=>" $this->input->post('facultad')",
 				'PROGRAMA'=> $this->input->post('programa'),
 				'NOMBRE'=> $this->input->post('nombre'),
 				'IDENTIFICACION'=> $this->input->post('identificacion'),
@@ -57,8 +57,13 @@ class EstudianteSemillero_Controller extends CI_Controller{
 		$this->load->model('EstudianteSemillero_Model');
 		$this->EstudianteSemillero_Model->editar($id,$estudiante);
 		redirect('EstudianteSemillero_Controller');
-	
-	
+	}
+
+	function obtener(){
+		$this->load->helper('url');
+		$id = "15464";
+		$this->load->model('EstudianteSemillero_Model');
+		$this->EstudianteSemillero_Model->obtener($id);
 	}
 	
 }

@@ -31,5 +31,15 @@
 			<span>Descargar Cuadro Presupuesto</span>
 		</a>
 	</li>
+	<li>
+		<a id="pruebas" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/pruebas/index" value="Presentar pruebas" type="submit" name="reporte_pruebas">
+			<span>Pruebas</span>
+		</a>
+	</li>
+	<li>
+		<a id="get_where" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/EstudianteSemillero_Controller/obtener" value="Presentar get" type="submit" name="get">
+			<span>Get Where</span>
+		</a>
+	</li>
 
 </ul>

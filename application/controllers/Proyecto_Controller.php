@@ -14,7 +14,7 @@ class Proyecto_Controller extends CI_Controller{
 		$this->load->view('Proyecto_view', $data);
 		$this->load->view('footer');
 		
-			}
+	}
 	
 	/**
 	 * funcion para insertar un proyecto con los datos que llegan desde Proyecto_View.
