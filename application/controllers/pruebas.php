@@ -9,7 +9,8 @@
 			$this->unit->use_strict(TRUE);
 			$this->unit->run($this->esArreglo_insertar(), 'is_array', "Prueba de tipo listar", 'PRUEBA PARA EL METODO INSERTAR ESTUDIANTE SEMILLERO');
 			$this->unit->run($this->insertar_estudiante_semillero(), '1094900638', "Prueba de validar estudiante insertado", "Valida que el estudiante que se inserte sea igual al de la prueba");
-			$this->unit->run($this->actualizar_semillero(),'is_true','Actualizar estudiante semillero', 'prueba para actualizar el estudiante inscrito en el semillero');
+			$this->unit->run($this->actualizar_semillero(),'is_true','Actualizar estudiante semillero', 'prueba para verificar que al actualizar  el estudiante inscrito en el semillero cambie correctamente');
+			$this->unit->run($this->probarEliminar(), 'is_true', 'Eliminar estudiante semillero', 'Prueba que verifica que se ha eliminado correctamente el estudiante de la base de datos');
 			$this->load->view('tests');
 		}
 
@@ -81,7 +82,7 @@
 
 
 
-//porque retorna null ?
+//
 		function actualizar_semillero(){
 			$this->load->helper('url');
 			// obtengo el estado inicial del estudiante Semillero.
@@ -121,14 +122,39 @@
 			return true;	
 		}
 
-
+		/**
+		 * Método que me permite validar su el estudiante fue eliminado correctamente
+		 */ 
 		function probarEliminar(){
 			$this->load->helper('url');
-			$estadoInicial =  $this->EstudianteSemillero_Model->obtener(15464);
-			if(sizeof($estadoInicial) == 1){
-				$estadoInicial = $estadoInicial[0];
-			}
+			$this->load->model('EstudianteSemillero_Model');
+			$estudiante= array(
+				'SEMESTRE_SEMILLERO'=> "semestre 2016-2",
+				'FACULTAD'=>"Educacion",
+				'PROGRAMA'=> "Lenguas Modernas",
+				'NOMBRE'=> "Andres David Montoya",
+				'IDENTIFICACION'=> "1098432234",
+				'SEMESTRE'=> "5",
+				'CORREO'=> "admon@live.com",
+				'CELULAR'=> "311885115"
+			);
+			// Inserto un estudiante en la base de datos
+			$this->EstudianteSemillero_Model->insertar($estudiante);
 
+			$this->EstudianteSemillero_Model->eliminar($estudiante['IDENTIFICACION']);
+			// Consulto el estudiante en la base de datos, no debería existir porque en la línea anterior se eliminó
+			$resultado = $this->EstudianteSemillero_Model->obtener($estudiante['IDENTIFICACION']);
+			// Verifico si el arreglo resultado está vacío, si está vacío es porque eliminó correctamente
+			if(empty($resultado))
+				return true;
+			else 
+				return false;
+
+		}
+
+		function probarSelect (){
+
+			
 		}
 
 	}
