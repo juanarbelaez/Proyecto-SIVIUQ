@@ -31,8 +31,14 @@ class EstudianteSemillero_Model extends CI_Model{
 	}
 
 	function obtener($id){
-		$consulta = $this->db->get_where('ESTUDIANTE_SEMILLERO', array('identificacion' => $id) );
+		$consulta = $this->db->get_where('ESTUDIANTE_SEMILLERO', array('identificacion' => $id));
 		$resultado = $consulta->result();
 		return $resultado;
 	}
+
+	function eliminar($id){
+		$consulta = $this->db->delete('ESTUDIANTE_SEMILLERO', array('identificacion' => $id));
+	//	$resultado = $consulta->result();
+	}
+
 }

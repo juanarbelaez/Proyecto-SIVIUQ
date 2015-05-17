@@ -65,5 +65,6 @@ class EstudianteSemillero_Controller extends CI_Controller{
 		$this->load->model('EstudianteSemillero_Model');
 		$this->EstudianteSemillero_Model->obtener($id);
 	}
-	
+
+
 }
