@@ -8,15 +8,24 @@ class Consejo_Curricular_Programa_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$data['lista']= $this->Consejo_Curricular_Programa_Model->consulta();
+		$programa="Sistemas y Computacion";
+		$data['lista']= $this->Consejo_Curricular_Programa_Model->consultar($programa);
 		$this->load->view('header', array('titulo' => "Consejo Curricular Programa"));
 		$this->load->view('Consejo_Curricular_Programa_View', $data);
 		$this->load->view('footer');
 	}
+	
 
-	function evaluar($id){
+	function evaluar(){
 		$this->load->helper('url');
+		$programa="Sistemas y Computacion";
+		$id=$_GET['id'];
+		$decision=$_GET['decision'];
+		$this->Consejo_Curricular_Programa_Model->evaluar($decision,$id);
+// 		$data['lista']= $this->Consejo_Curricular_Programa_Model->consultar($programa);
+		redirect('Consejo_Curricular_Programa_Controller');
 		
 		
 	}
+	
 }

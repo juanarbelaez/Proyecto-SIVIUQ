@@ -32,6 +32,16 @@
 		</a>
 	</li>
 	<li>
+		<a id="formularioConsejoCurricular" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/Consejo_Curricular_Programa_Controller" value="Consejo Curricular" type="submit" name="Consejo_Curricular">
+			<span>Consejo Curricular Ingenieria</span>
+		</a>
+	</li>
+	<li>
+		<a id="formularioConsejoInvestigaciones" class="formularioConsejoInvestigaciones" href="<?php echo base_url(); ?>index.php/Consejo_Investigaciones_Facultad_Controller" value="Consejo CUrricular" type="submit" name="Consejo_Investigaciones">
+			<span>Consejo Investigaciones Facultad</span>
+		</a>
+	</li>
+	<li>
 		<a id="pruebas" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/pruebas/index" value="Presentar pruebas" type="submit" name="reporte_pruebas">
 			<span>Pruebas</span>
 		</a>
