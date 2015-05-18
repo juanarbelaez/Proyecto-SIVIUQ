@@ -1,4 +1,4 @@
-<h2>Proyectos </h2>
+<h2>Consejo de Investigaciones de la Facultad </h2>
 
 <?php 
 

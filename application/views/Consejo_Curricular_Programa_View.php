@@ -1,4 +1,4 @@
-<h2>Proyectos </h2>
+<h2>Consejo Curricular del Programa </h2>
 
 <?php 
 

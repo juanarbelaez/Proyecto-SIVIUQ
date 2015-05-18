@@ -42,6 +42,16 @@
 		</a>
 	</li>
 	<li>
+		<a id="formularioComiteCentral" class="formularioComiteCentral" href="<?php echo base_url(); ?>index.php/Comite_Central_Investigaciones_Controller" value="Comite Central Investigaciones" type="submit" name="Comite_Central">
+			<span>Comite Central de Investigaciones</span>
+		</a>
+	</li>
+	<li>
+		<a id="formularioVicerrectoria" class="formularioVicerrectoria" href="<?php echo base_url(); ?>index.php/Vicerrectoria_Investigaciones_Controller" value="Vicerrectoria Investigaciones" type="submit" name="Vicerrectoria_Investigaciones">
+			<span>Vicerrectoria de Investigaciones</span>
+		</a>
+	</li>
+	<li>
 		<a id="pruebas" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/pruebas/index" value="Presentar pruebas" type="submit" name="reporte_pruebas">
 			<span>Pruebas</span>
 		</a>
@@ -51,5 +61,6 @@
 			<span>Get Where</span>
 		</a>
 	</li>
+	
 
 </ul>
