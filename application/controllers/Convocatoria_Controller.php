@@ -16,4 +16,10 @@ class Controller_Controller extends CI_Controller{
 		
 		$this->Convocatoria_Model->listarConvocatorias();
 	}
+
+	function obtener(){
+		$this->load->helper('url');
+		$this->load->model('Convocatoria_Model');
+		$this->Convocatoria_Model->obtener($id);
+	}
 }

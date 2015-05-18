@@ -56,11 +56,5 @@
 			<span>Pruebas</span>
 		</a>
 	</li>
-	<li>
-		<a id="get_where" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/EstudianteSemillero_Controller/obtener" value="Presentar get" type="submit" name="get">
-			<span>Get Where</span>
-		</a>
-	</li>
-	
 
 </ul>
