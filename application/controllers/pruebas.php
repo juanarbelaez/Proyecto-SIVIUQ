@@ -18,6 +18,8 @@
 			$this->unit->run($this->aprobarVicerrectoriaInvestigaciones(), 'is_true', 'Aprobacion de Vicerrectoria de Investigaciones', 'MODULO VICERRECTORIA INVESTIGACIONES FACULTAD: Verificar que exista la aprobación y que tenga su estado correctamente');
 			$this->unit->run($this->esArregloConvocatoria(), 'is_array', "Prueba de tipo listar", 'MODULO CONVOCATORIA: Prueba de el metodo listar');
 			$this->unit->run($this->insertar_investigador(), '12345678', "Prueba de validar el investigador insertado", "MODULO INVESTIGADOR: Valida que el investigador que se inserte sea igual al de la prueba");
+			$this->unit->run($this->esArreglo_investigador(), 'is_array', "Prueba de tipo listar", 'MODULO INVESTIGADOR: Prueba de el metodo insertar al listar el investigasdor');
+			$this->unit->run($this->actualizar_investigador(),'is_true', 'Actualizar Investigador', 'MODULO INVESTIGADOR: prueba para verificar que al actualizar  el investigador inscrito cambie correctamente');
 
 			$this->load->view('tests');
 		}
@@ -331,7 +333,7 @@
 		/**
 		 * Método que me permite validar que el dato sea un arrreglo
 		 */ 
-		function esArreglo_insertar(){
+		function esArreglo_investigador(){
 		$this->load->helper('url');
 			$investigador= array(
 				'PROGRAMA'=> "Sistemas",
@@ -349,10 +351,52 @@
 		
 			$this->Investigador_Model->insertar($investigador);
 			$resultado =  $this->Investigador_Model->obtener($investigador['DOCUMENTO']);
-			// Efectuar acciones para elimiar el estudiante creado, llamando algun metodo que elimine el estudiante en el modelo
-			$this->EstudianteSemillero_Model->eliminar($estudiante['IDENTIFICACION']);
+			// Efectuar acciones para elimiar el investigador creado, llamando algun metodo que elimine el investigador en el modelo
+			$this->Investigador_Model->eliminar($investigador['DOCUMENTO']);
 
 			return $resultado;
+		}
+
+		/**
+		 * Método que me permite validar que la actualización se este efectuando correctamente
+		 */ 
+		function actualizar_investigador(){
+			$this->load->helper('url');
+			// obtengo el estado inicial del investigador Semillero.
+			$estadoInicial =  $this->Investigador_Model->obtener(123);
+			if(sizeof($estadoInicial) == 1){
+				$estadoInicial = $estadoInicial[0];
+			}
+			// datos del investigador a editar
+		$investigador= array(
+				'PROGRAMA'=> "Sistemas",
+				'FACULTAD'=> "Ingenieria",
+				'GRUPO_INVESTIGACION'=> "GRID",
+				'TIPO_VINCULACION'=> "Catedratico",
+				'NOMBRE'=> "Ivan trivino",
+				'CELULAR'=> "3117630511",
+				'CORREO'=> "trivi@live.com"
+		);
+			$this->load->model('Investigador_Model');
+			// etido el investigador
+			$this->Investigador_Model->editar(123, $investigador);
+			// consulto en la base de datos al investigador para luego comparar los valores y saber que se ha editado con èxito
+			$resultado =  $this->Investigador_Model->obtener(123);
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+			// edito la base de datos para que quede en su estado inicial
+			$this->Investigador_Model->editar(123, $estadoInicial);
+			
+			if($resultado->GRUPO_INVESTIGACION != $investigador['GRUPO_INVESTIGACION'])
+				return false;
+			if($resultado->FACULTAD != $investigador['FACULTAD'])
+				return false;
+			if($resultado->PROGRAMA != $investigador['PROGRAMA'])
+				return false;
+			if($resultado->NOMBRE != $investigador['NOMBRE'])
+				return false;
+			return true;	
 		}
 
 	}
