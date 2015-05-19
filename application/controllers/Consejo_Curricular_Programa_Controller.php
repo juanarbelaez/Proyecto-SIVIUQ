@@ -28,4 +28,12 @@ class Consejo_Curricular_Programa_Controller extends CI_Controller{
 		
 	}
 	
+	function descargar_Archivo(){
+	
+		$formato=$_GET['formato'];
+		$data = file_get_contents($formato.".doc"); // Read the file's contents
+		$name =  "formato_proyecto.doc";
+		force_download($name, $data);
+	}
+	
 }
