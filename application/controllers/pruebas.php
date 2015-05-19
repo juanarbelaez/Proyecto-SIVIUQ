@@ -22,6 +22,7 @@
 			$this->unit->run($this->actualizar_investigador(),'is_true', 'Actualizar Investigador', 'MODULO INVESTIGADOR: prueba para verificar que al actualizar  el investigador inscrito cambie correctamente');
 			$this->unit->run($this->EliminarInvestigador(), 'is_true', 'Eliminar investigador', 'MODULO INVESTIGADOR: Prueba que verifica que se ha eliminado correctamente el investigador de la base de datos');
 			$this->unit->run($this->esArreglo_investigador(), 'is_array', "Prueba de tipo listar", 'MODULO INVESTIGADOR: Prueba de el metodo listar');
+			$this->unit->run($this->insertar_proyecto(), '12345', "Prueba de validar el proyecto insertado", "MODULO PROYECTO: Valida que el proyecto que se inserte sea igual al de la prueba");
 
 			$this->load->view('tests');
 		}
@@ -301,7 +302,7 @@
 					return $resultado;
 		}
 ////////////////////////////////////////////////////Modulo Investigador///////////////////////////////////////////		
-/**
+		/**
 		 * Método que me permite validar al insertar los campos la identificacion es la correcta
 		 */ 
 		function insertar_investigador(){
@@ -479,6 +480,48 @@
 			// Efectuar acciones para elimiar el estudiante creado, llamando algun metodo que elimine el estudiante en el modelo
 					return $resultado;
 		}
+
+
+/////////////////////////////////////////////////Modulo Proyecto//////////////////////////////////
+
+		/**
+		 * Método que me permite validar al insertar los campos la identificacion es la correcta
+		 */ 
+		/*function insertar_proyecto(){
+			$this->load->helper('url');
+
+			$proyecto= array(
+				'FACULTAD'=>"Ingenieria",
+				'PROGRAMA'=> "sistemas",
+				'ANIO_INICIO'=> "2005",
+				'TITULO'=> "Analisis de estimacion",
+				'NUMERO'=> "12345",
+				'DURACION'=> "1 año",
+				'GRUPO_INVESTIGACION'=> "SINFOCI",
+				'LINEA_INVESTIGACION'=> "Ingenieria de requisitos",
+				'INVESTIGADOR_PRINCIPAL'=> "Faber Giraldo",
+				'ESTADO'=> "Activo",
+				'DETALLES'=> "Revisar"
+				);
+	
+	
+			$this->load->model('Proyecto_Model');
+		
+			$this->Proyecto_Model->insertar($proyecto, 1);
+			$resultado =  $this->Proyecto_Model->obtener($proyecto['NUMERO']);
+			// Efectuar acciones para elimiar el proyecto creado, llamando algun metodo que elimine el proyecto en el modelo
+			$this->Proyecto_Model->eliminar($proyecto['NUMERO']);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+			
+			return $resultado->NUMERO;
+		}*/
+
+		
+
+
 
 	}
 

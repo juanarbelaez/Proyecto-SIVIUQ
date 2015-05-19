@@ -70,6 +70,24 @@ class Proyecto_Controller extends CI_Controller{
 	
 	
 	}
+
+	function obtener(){
+		$this->load->helper('url');
+		$this->load->model('Proyecto_Model');
+		$this->Proyecto_Model->obtener($id);
+	}
 	
+
+		/**
+	 * Funcion para eliminar un investigador de la base de datos a traves del id.
+	 */
+	function eliminar(){
+		$this->load->helper('url');
+		$id=$this->input->post('NUMERO');
+		
+		$this->load->model('Proyecto_Model');
+		$this->Proyecto_Model->eliminar($id);
+		redirect('Proyecto_Controller');
+	}
 	
 }
