@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Row>
+		<facultad>Ingenieria</facultad>
+		<programa>Sistemas y Computacion</programa>
+		<anio_inicio>2011</anio_inicio>
+		<titulo>Investigacion herramientas</titulo>
+		<numero>1</numero>
+		<duracion>3 años</duracion>
+		<grupo>GRID</grupo>
+		<linea>Usabilidad</linea>
+		<investigador>Faber Giraldo</investigador>
+		<estado>Activo</estado>
+		<detalles>En proceso</detalles>
+	</Row>
+	</Root>

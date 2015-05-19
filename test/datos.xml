@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Row>
-		<nombre>Juan</nombre>
-		<apellido>Hernadez</apellido>
-		<edad>28</edad>
-		<pais>Bolivia</pais>
-		<genero>1</genero>
+		<facultad>Ingenieria</facultad>
+		<programa>Sistemas y Computacion</programa>
+		<anio_inicio>2011</anio_inicio>
+		<titulo>Investigacion herramientas</titulo>
+		<numero>1</numero>
+		<duracion>3 años</duracion>
+		<grupo>GRID</grupo>
+		<linea>Usabilidad</linea>
+		<investigador>Faber Giraldo</investigador>
+		<estado>Activo</estado>
+		<detalles>En proceso</detalles>
 	</Row>
-	<Row>
-		<nombre>Daniela</nombre>
-		<apellido>Cordova</apellido>
-		<edad>26</edad>
-		<pais>Chile</pais>
-		<genero>2</genero>
-	</Row>
-	<Row>
-		<nombre>Javier</nombre>
-		<apellido>Cardenas</apellido>
-		<edad>25</edad>
-		<pais>Chile</pais>
-		<genero>1</genero>
-	</Row>
-	<Row>
-		<nombre>Ramiro</nombre>
-		<apellido>Criollo</apellido>
-		<edad>27</edad>
-		<pais>Argentina</pais>
-		<genero>1</genero>
-	</Row>
-	<Row>
-		<nombre>Maria</nombre>
-		<apellido>Lopez</apellido>
-		<edad>25</edad>
-		<pais>Colombia</pais>
-		<genero>2</genero>
-	</Row>
-</Root>
+	</Root>
