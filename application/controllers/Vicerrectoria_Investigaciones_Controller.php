@@ -21,7 +21,7 @@ class Vicerrectoria_Investigaciones_Controller extends CI_Controller{
 		$decision=$_GET['decision'];
 		$this->Vicerrectoria_Investigaciones_Model->evaluar($decision,$id);
 		redirect('Vicerrectoria_Investigaciones_Controller');
-
+		
 
 	}
 function descargar_Archivo(){

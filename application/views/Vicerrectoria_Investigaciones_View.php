@@ -14,4 +14,6 @@ if($lista!= false){
 	echo $this->table->generate();
 	
 }
+
+
 ?>
