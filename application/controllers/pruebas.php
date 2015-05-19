@@ -7,13 +7,24 @@
 				
 			
 			$this->unit->use_strict(TRUE);
-			$this->unit->run($this->esArreglo_insertar(), 'is_array', "Prueba de tipo listar", 'PRUEBA PARA EL METODO INSERTAR ESTUDIANTE SEMILLERO');
-			$this->unit->run($this->insertar_estudiante_semillero(), '1094900638', "Prueba de validar estudiante insertado", "Valida que el estudiante que se inserte sea igual al de la prueba");
-			$this->unit->run($this->actualizar_semillero(),'is_true','Actualizar estudiante semillero', 'prueba para verificar que al actualizar  el estudiante inscrito en el semillero cambie correctamente');
-			$this->unit->run($this->probarEliminar(), 'is_true', 'Eliminar estudiante semillero', 'Prueba que verifica que se ha eliminado correctamente el estudiante de la base de datos');
+			$this->unit->run($this->esArreglo_insertar(), 'is_array', "Prueba de tipo listar", 'MODULO ESTUDIANTE SEMILLERO: Prueba de el metodo insertar');
+			$this->unit->run($this->insertar_estudiante_semillero(), '1094900638', "Prueba de validar estudiante insertado", "MODULO ESTUDIANTE SEMILLERO: Valida que el estudiante que se inserte sea igual al de la prueba");
+			$this->unit->run($this->actualizar_semillero(),'is_true', 'Actualizar estudiante semillero', 'MODULO ESTUDIANTE SEMILLERO: prueba para verificar que al actualizar  el estudiante inscrito en el semillero cambie correctamente');
+			$this->unit->run($this->probarEliminar(), 'is_true', 'Eliminar estudiante semillero', 'MODULO ESTUDIANTE SEMILLERO: Prueba que verifica que se ha eliminado correctamente el estudiante de la base de datos');
+			$this->unit->run($this->probarEliminar(), 'is_true', 'Obtener Estudiante Semillero', 'MODULO ESTUDIANTE SEMILLERO: Prueba que verifica el metodo obtener');
+			$this->unit->run($this->aprobarComite(), 'is_true', 'Aprobacion de comite central de investigaciones', 'MODULO COMITE CENTRAL INVESTIGACIONES: Verificar que exista la aprobación y que tenga su estado correctamente');
+			$this->unit->run($this->aprobarComiteCurricular(), 'is_true', 'Aprobacion de consejo curricular programa', 'MODULO CONSEJO CURRICULAR DEL PROGRAMA: Verificar que exista la aprobación y que tenga su estado correctamente');
+			$this->unit->run($this->aprobarConsejoInvestigaciones(), 'is_true', 'Aprobacion de consejo de facultad', 'MODULO CONSEJO INVESTIGACIONES FACULTAD: Verificar que exista la aprobación y que tenga su estado correctamente');
+			$this->unit->run($this->aprobarVicerrectoriaInvestigaciones(), 'is_true', 'Aprobacion de Vicerrectoria de Investigaciones', 'MODULO VICERRECTORIA INVESTIGACIONES FACULTAD: Verificar que exista la aprobación y que tenga su estado correctamente');
+			$this->unit->run($this->esArregloConvocatoria(), 'is_array', "Prueba de tipo listar", 'MODULO CONVOCATORIA: Prueba de el metodo listar');
+			$this->unit->run($this->insertar_investigador(), '12345678', "Prueba de validar el investigador insertado", "MODULO INVESTIGADOR: Valida que el investigador que se inserte sea igual al de la prueba");
+
 			$this->load->view('tests');
 		}
 
+		/**
+		 * Método que me permite validar al insertar los campos la identificacion es la correcta
+		 */ 
 		function insertar_estudiante_semillero(){
 			$this->load->helper('url');
 			$estudiante= array(
@@ -53,7 +64,9 @@
 
 
 
-
+		/**
+		 * Método que me permite validar que el dato sea un arrreglo
+		 */ 
 		function esArreglo_insertar(){
 		$this->load->helper('url');
 		$estudiante= array(
@@ -77,12 +90,10 @@
 
 			return $resultado;
 		}
-
-
-
-
-
-//
+		
+		/**
+		 * Método que me permite validar que la actualización se este efectuando correctamente
+		 */ 
 		function actualizar_semillero(){
 			$this->load->helper('url');
 			// obtengo el estado inicial del estudiante Semillero.
@@ -151,12 +162,200 @@
 				return false;
 
 		}
-
+		/**
+		 * Método que me permite validar si el estudiante existe en la BD
+		 */ 
 		function probarSelect (){
+			$this->load->helper('url');
+			$this->load->model('EstudianteSemillero_Model');
+			$estudiante= array(
+				'SEMESTRE_SEMILLERO'=> "semestre 2017-1",
+				'FACULTAD'=>"Ciencias Basicas",
+				'PROGRAMA'=> "Tec Electronica",
+				'NOMBRE'=> "Fabian Osorio",
+				'IDENTIFICACION'=> "1098643",
+				'SEMESTRE'=> "7",
+				'CORREO'=> "Fabi@live.com",
+				'CELULAR'=> "311567887"
+				);
 
+			// Inserto un estudiante en la base de datos
+			$this->EstudianteSemillero_Model->insertar($estudiante);
+			$resultado =  $this->EstudianteSemillero_Model->obtener($estudiante['IDENTIFICACION']);
+			$this->EstudianteSemillero_Model->eliminar($estudiante['IDENTIFICACION']);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+
+			if($resultado->IDENTIFICACION == $estudiante['IDENTIFICACION'])
+				return true;
+			else 
+				return false;
+
+		}
+
+		//////////////////////////////////////////////Modulo Comité central Investigaciones//////////////////////////
+		/**
+		 * Método que me permite validar si la aprobación o no de los diferentes entes
+		 */ 
+		function aprobarComite()
+		{
+			$this->load->helper('url');
+			$this->load->model('Comite_Central_Investigaciones_Model');
+			$resultado =  $this->Comite_Central_Investigaciones_Model->evaluar('Aprobado', 7777);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+
+			if($resultado[1]== 7777)
+				return true;
+			else
+				return false;
+		}
+
+		/////////////////////////////////////////////Modulo Consejo Curricular Programa///////////////////
+		/**
+		 * Método que me permite validar si la aprobación o no de los diferentes entes
+		 */ 
+		function aprobarComiteCurricular()
+		{
+			$this->load->helper('url');
+			$this->load->model('Consejo_Curricular_Programa_Model');
+			$resultado =  $this->Consejo_Curricular_Programa_Model->evaluar('Aprobado', 7777);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+
+			if($resultado[1]== 7777)
+				return true;
+			else
+				return false;
+		}
+
+		////////////////////////////////////////Modulo consejo Investigaciones /////////////////////////////////
+		/**
+		 * Método que me permite validar si la aprobación o no de los diferentes entes
+		 */ 
+
+		function aprobarConsejoInvestigaciones()
+		{
+			$this->load->helper('url');
+			$this->load->model('Consejo_Investigaciones_Facultad_model');
+			$resultado =  $this->Consejo_Investigaciones_Facultad_model->evaluar('Aprobado', 7777);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+
+			if($resultado[1]== 7777)
+				return true;
+			else
+				return false;
+		}
+
+
+		////////////////////////////////////////////////Vicerrectoría de Investigaciones////////////////////////
+		/**
+		 * Método que me permite validar si la aprobación o no de los diferentes entes
+		 */ 
+
+		function aprobarVicerrectoriaInvestigaciones()
+		{
+			$this->load->helper('url');
+			$this->load->model('Vicerrectoria_Investigaciones_Model');
+			$resultado =  $this->Vicerrectoria_Investigaciones_Model->evaluar('Aprobado', 7777);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+
+			if($resultado[1]== 7777)
+				return true;
+			else
+				return false;
+		}
+
+////////////////////////////////////////////////////MODULO Convocatorias/////////////////////////////////////////////////////
+
+		/**
+		 * Método que me permite validar que el dato sea un arrreglo
+		 */ 
+		function esArregloConvocatoria(){
+		$this->load->helper('url');
+		$convocatoria= array(
+				'CONVOCATORIA'=> 1,
+			);
+	
+	
+			$this->load->model('Convocatoria_model');
+		
+			$resultado =  $this->Convocatoria_model->listarConvocatorias($convocatoria['CONVOCATORIA']);
+			// Efectuar acciones para elimiar el estudiante creado, llamando algun metodo que elimine el estudiante en el modelo
+					return $resultado;
+		}
+////////////////////////////////////////////////////Modulo Investigador///////////////////////////////////////////		
+/**
+		 * Método que me permite validar al insertar los campos la identificacion es la correcta
+		 */ 
+		function insertar_investigador(){
+			$this->load->helper('url');
+			$investigador= array(
+				'PROGRAMA'=> "Sistemas",
+				'FACULTAD'=> "Ingenieria",
+				'GRUPO_INVESTIGACION'=> "SINFOCI",
+				'TIPO_VINCULACION'=> "Planta",
+				'NOMBRE'=> "Faber Giraldo",
+				'DOCUMENTO'=> "12345678",
+				'CELULAR'=> "1234568",
+				'CORREO'=> "Faber@live.com"
+		);
+	
+	
+			$this->load->model('Investigador_Model');
+		
+			$this->Investigador_Model->insertar($investigador);
+			$resultado =  $this->Investigador_Model->obtener($investigador['DOCUMENTO']);
+			// Efectuar acciones para elimiar el investigador creado, llamando algun metodo que elimine el investigador en el modelo
+			$this->Investigador_Model->eliminar($investigador['DOCUMENTO']);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
 			
+			return $resultado->DOCUMENTO;
+		}
+
+		/**
+		 * Método que me permite validar que el dato sea un arrreglo
+		 */ 
+		function esArreglo_insertar(){
+		$this->load->helper('url');
+			$investigador= array(
+				'PROGRAMA'=> "Sistemas",
+				'FACULTAD'=> "Ingenieria",
+				'GRUPO_INVESTIGACION'=> "SINFOCI",
+				'TIPO_VINCULACION'=> "Planta",
+				'NOMBRE'=> "Faber Giraldo",
+				'DOCUMENTO'=> "12345678",
+				'CELULAR'=> "1234568",
+				'CORREO'=> "Faber@live.com"
+		);
+	
+	
+		$this->load->model('Investigador_Model');
+		
+			$this->Investigador_Model->insertar($investigador);
+			$resultado =  $this->Investigador_Model->obtener($investigador['DOCUMENTO']);
+			// Efectuar acciones para elimiar el estudiante creado, llamando algun metodo que elimine el estudiante en el modelo
+			$this->EstudianteSemillero_Model->eliminar($estudiante['IDENTIFICACION']);
+
+			return $resultado;
 		}
 
 	}
+
 
 ?>

@@ -113,4 +113,12 @@ class Investigador_Model extends CI_Model{
 				echo "el grupo de investigación no existe";
 			}
 		}
+		
+
+		function obtener($id){
+		$consulta = $this->db->get_where('INVESTIGADOR', array('documento' => $id));
+		$resultado = $consulta->result();
+		return $resultado;
+	}
+
 }

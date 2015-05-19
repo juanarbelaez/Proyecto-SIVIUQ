@@ -83,4 +83,10 @@ class Investigador_Controller extends CI_Controller{
 		$this->load->view('Tabla_View', $data);
 		$this->load->view('footer');
 	}
+
+	function obtener(){
+		$this->load->helper('url');
+		$this->load->model('Investigador_Model');
+		$this->Investigador_Model->obtener($id);
+	}
 }
