@@ -1,7 +1,7 @@
 <h2>Registrar Proyecto</h2>
 
 <br>
-<form id="formulario" class="formulario" action="<?php echo base_url(); ?>index.php/Proyecto_Controller/insertar" method="post" name="form">
+<form id="formulario" class="formulario" action="<?php echo base_url(); ?>index.php/Proyecto_Controller/insertar" method="post" enctype="multipart/form-data" name="form">
 
 
 <label> Convocatoria: <?php  echo count($listaConvocatoria);?>
@@ -28,7 +28,9 @@
 <label>Estado: <input type="text" name="estado"></label><br><br>
 <label>Detalles: <input type="text" name="detalles"></label><br><br>
 <label>Formato Proyecto: <input id="formatos" class="formatos" type="file" name="formato_proyecto"></label><br><br>
-<label>Cuadro Presupuesto: <input id="formatos" class="formatos" type="file" name="cuadro_presupuesto"></label><br><br>
+<!-- <label>Cuadro Presupuesto: <input id="formatos" class="formatos" type="file" name="cuadro_presupuesto"></label><br><br> -->
 <input id="boton" class="boton" type="submit" name="Guardar" value="Guardar">
-
 </form>
+
+
+
