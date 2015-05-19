@@ -20,6 +20,8 @@
 			$this->unit->run($this->insertar_investigador(), '12345678', "Prueba de validar el investigador insertado", "MODULO INVESTIGADOR: Valida que el investigador que se inserte sea igual al de la prueba");
 			$this->unit->run($this->esArreglo_investigador(), 'is_array', "Prueba de tipo listar", 'MODULO INVESTIGADOR: Prueba de el metodo insertar al listar el investigasdor');
 			$this->unit->run($this->actualizar_investigador(),'is_true', 'Actualizar Investigador', 'MODULO INVESTIGADOR: prueba para verificar que al actualizar  el investigador inscrito cambie correctamente');
+			$this->unit->run($this->EliminarInvestigador(), 'is_true', 'Eliminar investigador', 'MODULO INVESTIGADOR: Prueba que verifica que se ha eliminado correctamente el investigador de la base de datos');
+			$this->unit->run($this->esArreglo_investigador(), 'is_array', "Prueba de tipo listar", 'MODULO INVESTIGADOR: Prueba de el metodo listar');
 
 			$this->load->view('tests');
 		}
@@ -397,6 +399,85 @@
 			if($resultado->NOMBRE != $investigador['NOMBRE'])
 				return false;
 			return true;	
+		}
+
+		/**
+		 * Método que me permite validar su el investigador fue eliminado correctamente
+		 */ 
+		function EliminarInvestigador(){
+			$this->load->helper('url');
+			$this->load->model('Investigador_Model');
+		$investigador= array(
+				'PROGRAMA'=> "Lenguas modernas",
+				'FACULTAD'=> "Educacion",
+				'GRUPO_INVESTIGACION'=> "SINFOCI",
+				'TIPO_VINCULACION'=> "Planta",
+				'NOMBRE'=> "Jose Florez",
+				'DOCUMENTO'=> "12345678",
+				'CELULAR'=> "3117637070",
+				'CORREO'=> "joselito@live.com"
+		);
+			// Inserto un investigador en la base de datos
+			$this->Investigador_Model->insertar($investigador);
+
+			$this->Investigador_Model->eliminar($investigador['DOCUMENTO']);
+			// Consulto el investigador en la base de datos, no debería existir porque en la línea anterior se eliminó
+			$resultado = $this->Investigador_Model->obtener($investigador['DOCUMENTO']);
+			// Verifico si el arreglo resultado está vacío, si está vacío es porque eliminó correctamente
+			if(empty($resultado))
+				return true;
+			else 
+				return false;
+
+		}
+		/**
+		 * Método que me permite validar si el investigador existe en la BD
+		 */ 
+		function consultaInvestigador (){
+			$this->load->helper('url');
+			$this->load->model('Investigador_Model');
+		$investigador= array(
+				'PROGRAMA'=> "Lenguas modernas",
+				'FACULTAD'=> "Educacion",
+				'GRUPO_INVESTIGACION'=> "SINFOCI",
+				'TIPO_VINCULACION'=> "Planta",
+				'NOMBRE'=> "Jose Florez",
+				'DOCUMENTO'=> "12345678",
+				'CELULAR'=> "3117637070",
+				'CORREO'=> "joselito@live.com"
+		);
+
+			// Inserto un investigador en la base de datos
+			$this->Investigador_Model->insertar($investigador);
+			$resultado =  $this->Investigador_Model->obtener($investigador['DOCUMENTO']);
+			$this->Investigador_Model->eliminar($investigador['DOCUMENTO']);
+
+			if(sizeof($resultado) == 1){
+				$resultado = $resultado[0];
+			}
+
+			if($resultado->DOCUMENTO == $investigador['DOCUMENTO'])
+				return true;
+			else 
+				return false;
+
+		}
+
+		/**
+		 * Método que me permite validar que el dato sea un arrreglo
+		 */ 
+		function esArregloGrupoinvestigacion(){
+		$this->load->helper('url');
+		$investigador= array(
+				'INVESTIGADORES_GRUPO_INVEST'=> 'SINFOCI',
+			);
+	
+	
+			$this->load->model('Investigador_Model');
+		
+			$resultado =  $this->Investigador_Model->listarInvestigadoresGrupoInvestigacion($Investigador['INVESTIGADORES_GRUPO_INVEST']);
+			// Efectuar acciones para elimiar el estudiante creado, llamando algun metodo que elimine el estudiante en el modelo
+					return $resultado;
 		}
 
 	}
