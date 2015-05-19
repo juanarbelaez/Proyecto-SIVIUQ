@@ -27,8 +27,8 @@ class Comite_central_Investigaciones_Controller extends CI_Controller{
 function descargar_Archivo(){
 	
 		$formato=$_GET['formato'];
-		$data = file_get_contents($formato.".doc"); // Read the file's contents
-		$name =  "formato_proyecto.doc";
+		$data = file_get_contents($formato.".pdf"); // Read the file's contents
+		$name =  "formato_proyecto.pdf";
 		force_download($name, $data);
 	}
 
