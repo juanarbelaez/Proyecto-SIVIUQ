@@ -51,9 +51,9 @@
 			<span>Vicerrectoria de Investigaciones</span>
 		</a>
 	</li>
-	<li>
+	<!--<li>
 		<a id="pruebas" class="formularioDCPresupuesto" href="<?php echo base_url(); ?>index.php/pruebas/index" value="Presentar pruebas" type="submit" name="reporte_pruebas">
 			<span>Pruebas</span>
 		</a>
-	</li>
+	</li> -->
 </ul>
