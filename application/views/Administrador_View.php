@@ -84,7 +84,7 @@
                     <div class="page-heading">
                         <h1>Administrador</h1>
                         <hr class="small">
-                        <span class="subheading">Aqui pudes gestionar todos lo proyectos de investigacion que necesites.</span>
+                        <span class="subheading">Aqui puedes gestionar todos los proyectos de investigación que necesites.</span>
                     </div>
                 </div>
             </div>
@@ -95,11 +95,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>En tan solo un clic puede seleccionar en la barra del menú (ubicada arriba de tu pantalla) diferentes funciones como:
+                <p>Con tan solo un clic puedes seleccionar en la barra del menú (ubicada arriba de tu pantalla) diferentes funciones como:
                 	<p>- Registrar un proyecto.
                 	<p>- Registrar un investigador.
                 	<p>- Ver una lista de todos los proyectos de investigación que hay.
-                	<p>- O descargar todos los formatos que se requieren en este semestre para presentar un proyecto de investigación.</p>
+                	<p>- Descargar todos los formatos que se requieren este semestre para presentar un proyecto de investigación.</p>
             </div>
         </div>
     </div>

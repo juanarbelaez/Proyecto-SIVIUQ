@@ -104,10 +104,10 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            La Universidad del quindio se renueva
+                            La Universidad del Quindío se renueva.
                         </h2>
                         <h3 class="post-subtitle">
-                            La universidad del Quindío con colaboración con tres estudiantes de ingeniería ha puesto en marcha el desarrollo de un proyecto...
+                            La universidad del Quindío con colaboración de tres estudiantes de ingeniería ha puesto en marcha el desarrollo de un proyecto...
                         </h3>
                     </a>
                     <p class="post-meta">Posteado por <a href="#">Administrador</a> el 20 de mayo del 2015</p>
@@ -179,8 +179,9 @@
                     </ul>
                     <p class="copyright text-muted">Copyright &copy;</p>
                     <p class="copyright text-muted">Fabian David Osorio Sarmiento</p>
-                    <p class="copyright text-muted">Jeison Julian Barbosa</p>
-                    <p class="copyright text-muted">Juan Sebastian Florez Saavedra</p>
+                     <p class="copyright text-muted">Juan Sebastián Florez Saavedra</p>
+                    <p class="copyright text-muted">Jeison Julian Barbosa Serna</p>
+                   
                 </div>
             </div>
         </div>

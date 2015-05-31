@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Fabian David Osorio Sarmiento">
 
-    <title>Proyecto de investigacion</title>
+    <title>Proyecto de investigación</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?=base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -75,9 +75,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Registra un proyecto de investigacion</h1>
+                        <h1>Registra un proyecto de investigación</h1>
                         <hr class="small">
-                        <span class="subheading">Aqui puedes registrar un proyecto de investigacion con el formulario que encontraras mas abajo.</span>
+                        <span class="subheading">Aqui puedes registrar un proyecto de investigación con el formulario que encontrarás más abajo.</span>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
 
 <form enctype="multipart/form-data" class="formoid-solid-light-green" style="background-color:#ffffff;font-size:16px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:480px;min-width:150px" method="post" action="<?php echo base_url(); ?>index.php/Proyecto_Controller/insertar">
 	<div class="title">
-		<h2>Proyecto de investigacion</h2>
+		<h2>Proyecto de investigación</h2>
 	</div>
 	<div class="element-select">
 		<label class="title">
@@ -117,20 +117,28 @@
 	</div>
 	<div class="element-input" title="">
 		<label class="title">
-			<span class="required">*</span>
+			<span class="required">* Facultad</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" name="facultad" required="required" placeholder="Nombre de la facultad"/>
-			<span class="icon-place"></span>
+			<select class="large" type="text" name="facultad" >
+				<option value= Ingeniería> Ingeniería</option>
+				<option value= Educación> Educación</option>
+				<option value="Ciencias de la Salud" > Ciencias de la Salud</option>
+	</select>
+	<span class="icon-place"></span>
 		</div>
 	</div>
 	<div class="element-input">
 		<label class="title">
-			<span class="required">*</span>
+			<span class="required">* Programa</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" name="programa" required="required" placeholder="Nombre del programa"/>
-			<span class="icon-place"></span>
+		<select class="large" type="text" name="programa" required="required" placeholder="Programa al que pertenece el investigador">
+				<option value= "Sistemas y Computación"> Sistemas y Computación</option>
+				<option value= Civil> Civil</option>
+				<option value= Electrónica> Electrónica</option>
+	</select>	
+		<span class="icon-place"></span>
 		</div>
 	</div>
 	<div class="element-date">
@@ -172,7 +180,7 @@
 			<span class="required">*</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" name="grupo_investigacion" required="required" placeholder="Grupo de investigacion al que se asocia el proyecto"/>
+			<input class="large" type="text" name="grupo_investigacion" required="required" placeholder="Grupo de investigación al que se asocia el proyecto"/>
 			<span class="icon-place"></span>
 		</div>
 	</div>
@@ -181,7 +189,7 @@
 			<span class="required">*</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" name="linea_investigacion" required="required" placeholder="Linea de investigacion al que se asocia el proyecto"/>
+			<input class="large" type="text" name="linea_investigacion" required="required" placeholder="Linea de investigación al que se asocia el proyecto"/>
 			<span class="icon-place"></span>
 		</div>
 	</div>
@@ -190,7 +198,7 @@
 			<span class="required">*</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" min="0" max="2000000" name="investigador_principal" required="required" placeholder="# Numero de identificacion del investigador principal" value=""/>
+			<input class="large" type="text" min="0" max="2000000" name="investigador_principal" required="required" placeholder="# Numero de identificación del investigador principal" value=""/>
 			<span class="icon-place"></span>
 		</div>
 	</div>

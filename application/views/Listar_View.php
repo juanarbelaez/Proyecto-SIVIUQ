@@ -74,10 +74,10 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Lista de los proyectos de investigacion</h1>
+                        <h1>Lista de los proyectos de investigación</h1>
                         <hr class="small">
-                        <span class="subheading">Aqui puedes ver todos los proyectos que hay en registrados. Puedes listarlos ya sea por numero de convocatoria,
-                        	con el numero de identificacion del investigador principal o por el nombre del grupo de investigacion en el que se encuentra asignado.</span>
+                        <span class="subheading">Aqui puedes ver todos los proyectos que hay registrados. Puedes listarlos ya sea por número de convocatoria,
+                        	con el número de identificación del investigador principal o por el nombre del grupo de investigación en el que se encuentra asignado.</span>
                     </div>
                 </div>
             </div>

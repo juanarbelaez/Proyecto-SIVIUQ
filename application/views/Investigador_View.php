@@ -77,7 +77,7 @@
                     <div class="page-heading">
                         <h1>Registra un investigador</h1>
                         <hr class="small">
-                        <span class="subheading">Aqui puedes registrar un investigador con el formulario que encontraras mas abajo.</span>
+                        <span class="subheading">Aqui puedes registrar un investigador con el formulario que encontrarás más abajo.</span>
                     </div>
                 </div>
             </div>
@@ -99,18 +99,29 @@
 		</div>
 		<div class="element-input">
 			<label class="title">
-				<span class="required">*</span>
+				<span class="required">* Programa</span>
 			</label>
 			<div class="item-cont">
-				<input class="large" type="text" name="programa" required="required" placeholder="Programa al que pertenece el investigador"/>
+				<select class="large" type="text" name="programa" required="required" placeholder="Programa al que pertenece el investigador">
+				<option value= "Sistemas y Computación"> Sistemas y Computación</option>
+				<option value= Civil> Civil</option>
+				<option value= Electrónica> Electrónica</option>
+	</select>
 				<span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-input">
 			<label class="title">
 			</label>
+			<label class="title">
+				<span class="required">* Facultad</span>
+			</label>
 			<div class="item-cont">
-				<input class="large" type="text" name="facultad" placeholder="Facultad del programa"/>
+				<select class="large" type="text" name="facultad" placeholder="Facultad del programa">
+				<option value= Ingeniería> Ingeniería</option>
+				<option value= Educación> Educación</option>
+				<option value="Ciencias de la Salud" > Ciencias de la Salud</option>
+	</select>
 				<span class="icon-place"></span>
 			</div>
 		</div>
@@ -119,7 +130,7 @@
 				<span class="required">*</span>
 			</label>
 			<div class="item-cont">
-				<input class="large" type="text" name="grupo_investigacion" required="required" placeholder="Grupo de investigacion al que pertenece el investigador"/>
+				<input class="large" type="text" name="grupo_investigacion" required="required" placeholder="Grupo de investigación al que pertenece el investigador"/>
 				<span class="icon-place"></span>
 			</div>
 		</div>
@@ -128,7 +139,7 @@
 				<span class="required">*</span>
 			</label>
 			<div class="item-cont">
-				<input class="large" type="text" name="tipo_vinculacion" required="required" placeholder="Tipo de vinculacion"/>
+				<input class="large" type="text" name="tipo_vinculacion" required="required" placeholder="Tipo de vinculación"/>
 				<span class="icon-place"></span>
 			</div>
 		</div>
@@ -146,7 +157,7 @@
 				<span class="required">*</span>
 			</label>
 			<div class="item-cont">
-				<input class="large" type="text" min="0" max="2000000" name="documento" required="required" placeholder="Numero de identificacion del investigador" value=""/>
+				<input class="large" type="text" min="0" max="2000000" name="documento" required="required" placeholder="Numero de identificación del investigador" value=""/>
 				<span class="icon-place"></span>
 			</div>
 		</div>
@@ -162,7 +173,7 @@
 			<label class="title">
 			</label>
 			<div class="item-cont">
-				<input class="large" type="email" name="correo" value="" placeholder="Correo electronico de contacto"/>
+				<input class="large" type="email" name="correo" value="" placeholder="Correo electrónico de contacto"/>
 				<span class="icon-place"></span>
 			</div>
 		</div>
