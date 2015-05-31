@@ -45,14 +45,18 @@ class Investigador_Model extends CI_Model{
 		 	);
 		 	//se agrega el fk_grupo y el fk_investigador a la tabla investigadores por grupo de investigacion.
 		 	$this->db->insert('INVESTIGADORES_GRUPO_INVEST',$data);
+
+
+		echo '<script language="javascript">alert("El investigador se ha registrado correctamente");</script>'; 
+		$this->load->view('Investigador_View');
 		 }
 		 else{
-		 	echo "no existe el grupo de investigación";
+		 	echo '<script language="javascript">alert("El grupo de investigacion no existe, vuelva atras para corregir el error");</script>';
 		 }
 		
 		}
 		else{
-			echo "el investigador ya existe.";
+			echo '<script language="javascript">alert("El investigador ya existe, vuelva atras para corregir el error");</script>';
 		}
 	
 	}
@@ -110,7 +114,7 @@ class Investigador_Model extends CI_Model{
 			return $data;
 		}
 			else{
-				echo "el grupo de investigación no existe";
+				echo '<script language="javascript">alert("El grupo de investigacion no existe, vuelva atras para corregir el error");</script>';
 			}
 		}
 		

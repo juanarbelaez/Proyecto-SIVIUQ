@@ -76,19 +76,21 @@ class Proyecto_Model extends CI_Model{
 				);
 				$this->db->insert('CONSEJO_CURRIC_PROGRAMA', $data4);
 				
-				echo "se envio al consejo curricular del programa para su debida evaluación";
+				echo '<script language="javascript">alert("se envio al consejo curricular del programa para su debida evaluacion");</script>'; 
+				$this->load->view('Proyecto_view');
+				
 			}
 			else{
-				echo "No existe el investigador";
+				echo '<script language="javascript">alert("El investigador no existe vuelva atras para corregir el error");</script>';
 			}
 			}
 			else{
-				echo "no existe el grupo de investigación";
+				echo '<script language="javascript">alert("El grupo de investigacion no existe vuelva, atras para corregir el error");</script>';
 			}
 		
 		}
 		else{
-			echo "el proyecto ya existe.";
+			echo '<script language="javascript">alert("El proyecto que intenta crear ya existe, vuelva atras para corregir el error");</script>';
 		}
 	}
 
@@ -132,7 +134,7 @@ class Proyecto_Model extends CI_Model{
 			return $data;
 		}
 		else{
-			echo "el proyecto no existe";
+			echo '<script language="javascript">alert("El proyecto no existe vuelva, atras para corregir el error");</script>';
 		}
 	}
 	
@@ -159,7 +161,7 @@ class Proyecto_Model extends CI_Model{
 			return $data;
 		}
 		else{
-			echo "el proyecto no existe";
+			echo '<script language="javascript">alert("El proyecto no existe vuelva, atras para corregir el error");</script>';
 		}
 	}
 	
@@ -186,7 +188,7 @@ class Proyecto_Model extends CI_Model{
 			return $data;
 		}
 		else{
-			echo "el proyecto no existe";
+			echo '<script language="javascript">alert("El proyecto no existe vuelva, atras para corregir el error");</script>';
 		}
 	}
 	

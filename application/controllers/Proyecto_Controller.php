@@ -9,11 +9,11 @@ class Proyecto_Controller extends CI_Controller{
 	
 	function index(){
 		
-		$this->load->view('header', array('titulo' => "Crear Proyecto"));
+		//$this->load->view('header', array('titulo' => "Crear Proyecto"));
 		$this->load->model('Convocatoria_Model');
 		$data['listaConvocatoria']=$this->Convocatoria_Model->listarConvocatorias();
 		$this->load->view('Proyecto_view', $data);
-		$this->load->view('footer');
+		//$this->load->view('footer');
 		
 	}
 	
@@ -64,6 +64,20 @@ class Proyecto_Controller extends CI_Controller{
 			echo $this->upload->display_errors();
 			return;
 		}
+
+		if ($this->input->post("submit")) {
+			
+
+			
+			if ($this->form_validation->run()!=false) {
+				$data ["mensaje"]="Validacion correcta";
+			}
+			else {
+				$data ["mensaje"]="Validacion incorrecta";
+			}
+
+
+		}
 		
 		$data['uploadSuccess'] = $this->upload->data();
 		$proyecto= array(
@@ -79,13 +93,12 @@ class Proyecto_Controller extends CI_Controller{
 				'ESTADO'=> $this->input->post('estado'),
 				'DETALLES'=> $this->input->post('detalles'),
 				'FORMATO_PROYECTO'=>"uploads/".$investigador.'_'.$titulo
-		);
-	
+);
+
 		
 		$this->load->model('Proyecto_Model');
 		$this->Proyecto_Model->insertar($proyecto, $idConvocatoria);
 // 		$this->cargar_archivo();
-	
 		
 	
 	}

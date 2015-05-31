@@ -7,9 +7,9 @@ class Listar_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('header', array('titulo' => "Listar Proyectos"));
+		//$this->load->view('header', array('titulo' => "Listar Proyectos"));
 		$this->load->view('Listar_View');
-		$this->load->view('footer');
+		//$this->load->view('footer');
 	}
 	
 	function listar(){

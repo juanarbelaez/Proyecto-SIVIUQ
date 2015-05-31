@@ -7,9 +7,9 @@ class Administrador_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('header', array('titulo' => "Administrador"));
+		//$this->load->view('header', array('titulo' => "Administrador"));
 		$this->load->view('Administrador_View');
-		$this->load->view('footer');
+		//$this->load->view('footer');
 	}
 	
 

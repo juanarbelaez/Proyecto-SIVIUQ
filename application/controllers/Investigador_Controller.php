@@ -8,9 +8,9 @@ class Investigador_Controller extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('header', array('titulo' => "Crear Investigador"));
+		//$this->load->view('header', array('titulo' => "Crear Investigador"));
 		$this->load->view('Investigador_View');
-		$this->load->view('footer');
+		//$this->load->view('footer');
 	}
 
 	/**
@@ -79,9 +79,9 @@ class Investigador_Controller extends CI_Controller{
 		
 		$this->load->model('Investigador_Model');
 		$data['data']= $this->Investigador_Model->listarInvestigadoresGrupoInvestigacion($nombre);
-		$this->load->view('header', array('titulo' => "Tabla Investigadores Grupo Investigación"));
+		//$this->load->view('header', array('titulo' => "Tabla Investigadores Grupo Investigación"));
 		$this->load->view('Tabla_View', $data);
-		$this->load->view('footer');
+		//$this->load->view('footer');
 	}
 
 	function obtener(){
