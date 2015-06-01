@@ -162,7 +162,7 @@
 			<span class="required">*</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" min="0" max="100" name="numero" required="required" placeholder="Numero del proyecyo (codigo de autentificacion)" value=""/>
+			<input class="large" type="text" min="0" max="100" name="numero" required="required" placeholder="Numero del proyecto (codigo de autentificación)" value=""/>
 			<span class="icon-place"></span>
 		</div>
 	</div>
